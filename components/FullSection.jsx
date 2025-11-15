@@ -28,9 +28,9 @@ const FullSection = ({
         position: 'relative',
       }}
     >
-      <div style={halfStyle(bgColor, bgColor)}>{children}</div>
+      <div style={style(bgColor, bgColor)}>{children}</div>
     </section>
   );
 };
 
-export default SplitSection;
+export default FullSection;
