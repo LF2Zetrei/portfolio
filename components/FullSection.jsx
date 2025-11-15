@@ -1,21 +1,36 @@
-export default function FullSection({
-  height = "h-[500px]",
-  children,
-  bgColor = "bg-white",
-  bgImage = null,
-}) {
+import React from 'react';
+
+const FullSection = ({
+  height,
+  bgColor,
+  bgImage,
+  children
+}) => {
+  const style = (bgColor, bgImage) => ({
+    flex: 1,
+    height: '100%',
+    backgroundColor: bgColor,
+    backgroundImage: bgImage ? `url(${bgImage})` : undefined,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+  });
+
   return (
-    <section className={"w-full flex relative " + height}>
-      <div
-        className={
-          bgColor +
-          " w-full flex justify-center items-center " +
-          (bgImage ? "bg-cover bg-center" : "")
-        }
-        style={bgImage ? { backgroundImage: `url(${bgImage})` } : {}}
-      >
-        {children}
-      </div>
+    <section
+      style={{
+        display: 'flex',
+        width: '100%',
+        height: typeof height === 'number' ? `${height}px` : height,
+        position: 'relative',
+      }}
+    >
+      <div style={halfStyle(bgColor, bgColor)}>{children}</div>
     </section>
   );
-}
+};
+
+export default SplitSection;
