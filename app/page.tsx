@@ -5,18 +5,24 @@ export default function Home() {
   return (
     <>
       <SplitSection
-        height="h-[400px]"
-        left={<h1 className="text-2xl font-bold">Gauche</h1>}
-        right={<h1 className="text-2xl font-bold">Droite</h1>}
-        leftBgColor="bg-gray-200"
-        rightBgColor="bg-blue-200"
+        height={300}
+        leftBgColor="#f0f0f0"
+        rightBgColor="#ddd"
+        leftBgImage="https://example.com/image1.jpg"
+        rightBgImage={null}
         showDivider={true}
+        leftContent={<div>Left side content</div>}
+        rightContent={<div>Right side content</div>}
       />
       <SplitSection
-        height="h-[500px]"
-        left={<p className="text-lg">Texte gauche</p>}
-        right={<p className="text-lg">Texte droite</p>}
-        dividerColor="bg-gray-200"
+        height={400}
+        rightBgColor="#f0f0f0"
+        leftBgColor="#ddd"
+        rightBgImage="https://example.com/image1.jpg"
+        leftBgImage={null}
+        showDivider={false}
+        leftContent={<div>Left side content</div>}
+        rightContent={<div>Right side content</div>}
       />
     </>
   );

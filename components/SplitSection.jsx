@@ -1,48 +1,52 @@
-export default function SplitSection({
-  height = "h-[500px]",
-  left,
-  right,
-  leftBgColor = "bg-white",
-  rightBgColor = "bg-white",
-  leftBgImage = null,
-  rightBgImage = null,
+import React from 'react';
+
+const SplitSection = ({
+  height,
+  leftBgColor,
+  rightBgColor,
+  leftBgImage,
+  rightBgImage,
   showDivider = false,
-  dividerColor = "bg-black",
-  dividerWidth = "w-[2px]",
-}) {
+  leftContent,
+  rightContent,
+}) => {
+  const halfStyle = (bgColor, bgImage) => ({
+    flex: 1,
+    height: '100%',
+    backgroundColor: bgColor,
+    backgroundImage: bgImage ? `url(${bgImage})` : undefined,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative',
+  });
+
+  const dividerStyle = {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    width: '1px',
+    backgroundColor: '#000',
+    left: '50%',
+    transform: 'translateX(-50%)',
+  };
+
   return (
-    <section className={"w-full flex relative " + height}>
-      <div
-        className={
-          leftBgColor +
-          " w-1/2 flex justify-center items-center " +
-          (leftBgImage ? "bg-cover bg-center" : "")
-        }
-        style={leftBgImage ? { backgroundImage: `url(${leftBgImage})` } : {}}
-      >
-        {left}
-      </div>
-      <div
-        className={
-          rightBgColor +
-          " w-1/2 flex justify-center items-center " +
-          (rightBgImage ? "bg-cover bg-center" : "")
-        }
-        style={rightBgImage ? { backgroundImage: `url(${rightBgImage})` } : {}}
-      >
-        {right}
-      </div>
-      {showDivider && (
-        <div
-          className={
-            "absolute top-0 h-full " +
-            dividerWidth +
-            " " +
-            dividerColor +
-            " left-1/2 transform -translate-x-1/2"
-          }
-        />
-      )}
+    <section
+      style={{
+        display: 'flex',
+        width: '100%',
+        height: typeof height === 'number' ? `${height}px` : height,
+        position: 'relative',
+      }}
+    >
+      <div style={halfStyle(leftBgColor, leftBgImage)}>{leftContent}</div>
+      <div style={halfStyle(rightBgColor, rightBgImage)}>{rightContent}</div>
+      {showDivider && <div style={dividerStyle} />}
     </section>
   );
-}
+};
+
+export default SplitSection;
