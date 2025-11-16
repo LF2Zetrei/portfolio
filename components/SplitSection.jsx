@@ -9,6 +9,7 @@ const SplitSection = ({
   showDivider = false,
   leftContent,
   rightContent,
+  padding = "none"
 }) => {
   const halfStyle = (bgColor, bgImage) => ({
     flex: 1,
@@ -21,6 +22,7 @@ const SplitSection = ({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    padding,
   });
 
   const dividerStyle = {

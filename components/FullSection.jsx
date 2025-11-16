@@ -4,9 +4,10 @@ const FullSection = ({
   height,
   bgColor,
   bgImage,
-  children
+  children,
+  padding = "none",
 }) => {
-  const style = (bgColor, bgImage) => ({
+  const style = (bgColor, bgImage, padding) => ({
     flex: 1,
     height: '100%',
     backgroundColor: bgColor,
@@ -17,6 +18,7 @@ const FullSection = ({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    padding: padding,
   });
 
   return (
@@ -28,7 +30,7 @@ const FullSection = ({
         position: 'relative',
       }}
     >
-      <div style={style(bgColor, bgColor)}>{children}</div>
+      <div style={style(bgColor, bgColor, padding)}>{children}</div>
     </section>
   );
 };

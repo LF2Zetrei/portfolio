@@ -8,6 +8,13 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
+a {
+  color: #1e2130;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
 :root {
   --primary-color: #1d4ed8;
 }

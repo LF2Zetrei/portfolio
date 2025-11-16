@@ -83,19 +83,19 @@
       "name": "GitHub",
       "description": "Retrouvez l’ensemble de mes projets open-source.",
       "url": "https://github.com/username",
-      "icon": "/images/social/github.png"
+      "icon": "/images/socials/github.png"
     },
     {
       "name": "LinkedIn",
       "description": "Découvrez mon parcours académique et professionnel.",
       "url": "https://www.linkedin.com/in/username/",
-      "icon": "/images/social/linkedin.png"
+      "icon": "/images/socials/linkedin.png"
     },
     {
-      "name": "Twitter",
-      "description": "Mes publications, réflexions tech et échanges du quotidien.",
+      "name": "CV",
+      "description": "My resume, professional experiences and more about me.",
       "url": "https://twitter.com/username",
-      "icon": "/images/social/twitter.png"
+      "icon": "/images/socials/cv.png"
     }
   ]
 }

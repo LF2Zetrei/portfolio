@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SplitSection from "@/components/SplitSection"
+import CardPhoto from "@/components/CardPhoto"
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         rightBgImage={null}
         showDivider={true}
         leftContent={<div>Left side content</div>}
-        rightContent={<div>Right side content</div>}
+        rightContent={<CardPhoto imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb"/>
+        }
       />
       <SplitSection
         height={400}
