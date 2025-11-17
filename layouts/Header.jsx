@@ -34,7 +34,7 @@ export default function Header({
         }}
       >
         <Link href="/projects">my projects</Link>
-        <Button href="/contact" text="contact me !" />
+        <Button href="/contact" text="contact me !" borderTBSize="1px"/>
       </div>
     </div>
   );

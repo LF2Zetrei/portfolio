@@ -7,10 +7,12 @@ const Button = ({
   height = '40px',
   text = 'Click me',
   color = '#fff',
-  borderLine = "black",
-  borderSize = "2px",
+  borderSideLine = "black",
+  borderSideSize = "2px",
+  borderTBLine = "black",
+  borderTBSize = "2px",
 }) => {
-  const style = (borderLine, borderSize) => ({
+  const style = (borderSideLine, borderSideSize, borderTBSize, borderTBLine) => ({
     display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -18,8 +20,10 @@ const Button = ({
     width,
     height,
     borderRadius: '9999px',
-    borderLeft: `${borderSize} solid ${borderLine}`,
-    borderRight: `${borderSize} solid ${borderLine}`,
+    borderLeft: `${borderSideSize} solid ${borderSideLine}`,
+    borderRight: `${borderSideSize} solid ${borderSideLine}`,
+    borderTop: `${borderTBSize} solid ${borderTBLine}`,
+    borderBottom: `${borderTBSize} solid ${borderTBLine}`,
     color,
     textDecoration: 'none',
     cursor: 'pointer',
@@ -28,7 +32,7 @@ const Button = ({
   });
 
   return (
-    <Link href={href} style={style(borderLine, borderSize)}>
+    <Link href={href} style={style(borderSideLine, borderSideSize, borderTBSize, borderTBLine)}>
         {text}
     </Link>
   );

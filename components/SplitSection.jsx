@@ -9,7 +9,9 @@ const SplitSection = ({
   showDivider = false,
   leftContent,
   rightContent,
-  padding = "none"
+  padding = "none",
+  borderTopStyle = { line: "solid", size: "2px", color: "#000" },
+  borderBottomStyle = { line: "solid", size: "2px", color: "#000" },
 }) => {
   const halfStyle = (bgColor, bgImage) => ({
     flex: 1,
@@ -35,6 +37,9 @@ const SplitSection = ({
     transform: 'translateX(-50%)',
   };
 
+  const borderTop = `${borderTopStyle.size} ${borderTopStyle.line} ${borderTopStyle.color}`;
+  const borderBottom = `${borderBottomStyle.size} ${borderBottomStyle.line} ${borderBottomStyle.color}`;
+
   return (
     <section
       style={{
@@ -42,6 +47,8 @@ const SplitSection = ({
         width: '100%',
         height: typeof height === 'number' ? `${height}px` : height,
         position: 'relative',
+        borderTop,
+        borderBottom,
       }}
     >
       <div style={halfStyle(leftBgColor, leftBgImage)}>{leftContent}</div>

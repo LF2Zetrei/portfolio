@@ -8,23 +8,24 @@ export default function Home() {
       <SplitSection
         height={300}
         leftBgColor="#f0f0f0"
-        rightBgColor="#ddd"
+        rightBgColor="#f0f0f0"
         leftBgImage="https://example.com/image1.jpg"
         rightBgImage={null}
-        showDivider={true}
-        leftContent={<div>Left side content</div>}
-        rightContent={<CardPhoto imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb"/>
-        }
-      />
-      <SplitSection
-        height={400}
-        rightBgColor="#f0f0f0"
-        leftBgColor="#ddd"
-        rightBgImage="https://example.com/image1.jpg"
-        leftBgImage={null}
         showDivider={false}
         leftContent={<div>Left side content</div>}
+        rightContent={<CardPhoto imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb"/>}
+        borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
+      />
+      <SplitSection
+        height={700}
+        rightBgColor="#f0f0f0"
+        leftBgColor="#ddd"
+        rightBgImage={null}
+        leftBgImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+        showDivider={false}
+        leftContent={null}
         rightContent={<div>Right side content</div>}
+        borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
       />
     </>
   );
