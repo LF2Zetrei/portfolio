@@ -17,7 +17,7 @@ export default function Home() {
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
       />
       <SplitSection
-        height={700}
+        height={800}
         rightBgColor="#f0f0f0"
         leftBgColor="#ddd"
         rightBgImage={null}
