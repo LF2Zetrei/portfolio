@@ -9,7 +9,7 @@ export default function Footer({
   paddingRight = "20px",
   gap = "15px",
 }) {
-  const { socials } = useDatas();
+  const { socials, footer } = useDatas();
 
   return (
     <div
@@ -29,7 +29,9 @@ export default function Footer({
           url={s.url}
           icon={s.icon}
           name={s.name}
-          description={s.descritption}
+          iconColor={s.style["icon-color"]}
+          nameColor={s.style["name-color"]}
+          descriptionColor={s.style.color}
         />
       ))}
     </div>

@@ -4,11 +4,10 @@ import "./global.css";
 import Footer from "@/layouts/Footer";
 import Header from "@/layouts/Header";
 import FullSection from "@/components/FullSection";
-import {ThemeProvider, useTheme} from "@/context/ThemeContext";
-
+import { useDatas } from "@/hooks/useDatas";
 
 export default function RootLayout({ children }){
-  
+  const {footer} = useDatas();
   return (
     <html lang="fr">
       <body className="min-h-screen flex flex-col">
@@ -16,21 +15,12 @@ export default function RootLayout({ children }){
         <main className="flex-1 w-full py-10">
           <div className="container mx-auto">{children}</div>
         </main>
-        <ThemeProvider>
-          <StyledRouteLayout></StyledRouteLayout>
-        </ThemeProvider>
-        
+        <FullSection 
+                padding ={footer.style.padding}
+                bgColor={footer.style["bg-color"]}
+                children={<Footer backgroundColor={footer.style["bg-color"]} gap={footer.style.gap}/>}
+            />
       </body>
     </html>
   )
-}
-
-function StyledRouteLayout(){
-  const {theme, toggleTheme} = useTheme();
-  
-  return (<FullSection onClick={toggleTheme}
-                padding ="10px"
-                bgColor={theme!=="dark" ? "white" : "black"}
-                children={<Footer gap="200px"/>}
-            />)
 }

@@ -155,19 +155,41 @@
       "name": "GitHub",
       "description": "Find all my projects.",
       "url": "https://github.com/username",
-      "icon": "/images/socials/github.png"
+      "icon": "/images/socials/github.png",
+      "style": {
+        "color": "#1e2130",
+        "name-color": "#1e2130",
+        "icon-color": "#1e2130"
+      }
     },
     {
       "name": "LinkedIn",
       "description": "Découvrez mon parcours académique et professionnel.",
       "url": "https://www.linkedin.com/in/username/",
-      "icon": "/images/socials/linkedin.png"
+      "icon": "/images/socials/linkedin.png",
+      "style": {
+        "color": "#1e2130",
+        "name-color": "#1e2130",
+        "icon-color": "#1e2130"
+      }
     },
     {
       "name": "CV",
       "description": "My resume, professional experiences and more about me.",
       "url": "https://twitter.com/username",
-      "icon": "/images/socials/cv.png"
+      "icon": "/images/socials/cv.png",
+      "style": {
+        "color": "#1e2130",
+        "name-color": "#1e2130",
+        "icon-color": "#1e2130"
+      }
     }
-  ]
+  ],
+  "footer": {
+    "style": {
+      "gap": "200px",
+      "bg-color": "#c6c2cd",
+      "padding": "10px"
+    }
+  }
 }
