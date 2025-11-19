@@ -1,28 +1,27 @@
 import Link from "next/link";
 import Button from "@/components/Button";
+import { useDatas } from "@/hooks/useDatas";
 
-export default function Header({
-  height = "60px",
-  backgroundColor = "#fff",
-  leftPadding = "20px",
-  rightPadding = "20px",
-  gap = "15px",
-}) {
+export default function Header() {
+  const { header } = useDatas();
+
+  if (!header) return null;
+
   return (
     <div
       style={{
-        height,
-        backgroundColor,
+        height: header.style["height"],
+        backgroundColor: header.style["bg-color"],
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingLeft: leftPadding,
-        paddingRight: rightPadding,
+        paddingLeft: header.style["padding-left"],
+        paddingRight: header.style["padding-right"],
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <Link href="/">
-          <p style={{ margin: 0 }}>Lucas</p>
+          <p style={{ margin: 0 }}>{header.title}</p>
         </Link>
       </div>
 
@@ -30,11 +29,19 @@ export default function Header({
         style={{
           display: "flex",
           alignItems: "center",
-          gap,
+          gap: header.style["gap"],
         }}
       >
-        <Link href="/projects">my projects</Link>
-        <Button href="/contact" text="contact me !" borderTBSize="1px"/>
+        <Link href={header["link-link"]}>{header["link-text"]}</Link>
+
+        <Button
+          href={header["button-link"]}
+          text={header["button-text"]}
+          borderTBSize="1px"
+          backgroundColor={header.style["button-color"]}
+          color={header.style["color"]}
+          borderBTLine={header.style["borderTBLine"]}
+        />
       </div>
     </div>
   );

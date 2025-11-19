@@ -1,24 +1,24 @@
 "use client";
 
-import {createContext, useContext, useState} from "react";
+import { createContext, useContext, useState } from "react";
 
-const ThemeContext = createContext();
+const LanguageContext = createContext();
 
-export function LanguageProvider({children}) {
-    const [language, setLanguage] = useState("fr");
+export function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState("fr");
 
-    const toggleLanguage = () => 
-        setLanguage(language === "fr" ? "en" : "fr");
+  const toggleLanguage = () =>
+    setLanguage((prev) => (prev === "fr" ? "en" : "fr"));
 
-    return (
-        <ThemeContext.Provider value={{language, toggleLanguage}}>
-            <div className={language === "en" ? "en" : ""}>
-                {children}
-            </div>
-        </ThemeContext.Provider>
-    );
-} 
+  return (
+    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+      <div className={language === "en" ? "lang-en" : "lang-fr"}>
+        {children}
+      </div>
+    </LanguageContext.Provider>
+  );
+}
 
 export function useLanguage() {
-    return useContext(LanguageContext);
+  return useContext(LanguageContext);
 }

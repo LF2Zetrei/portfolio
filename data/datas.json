@@ -1,7 +1,79 @@
 {
+  "header": {
+    "title": "Lucas",
+    "link-text" : "Projects",
+    "link-link" : "/projects",
+    "button-text": "Contact me",
+    "button-link": "/contact",
+    "style": {
+      "bg-color":"#ece9e5",
+      "padding-left": "50px",
+      "padding-right": "50px",
+      "gap": "30px",
+      "height": "100px",
+      "button-color": "#c1b580",
+      "color":"#1e2130",
+      "borderBTLine": "#1e2130",
+      "button-w": "60px"
+    }
+  },
+
   "homepage": {
-    "title": "Bienvenue sur mon Portfolio",
-    "subtitle": "Ingénieur Informatique spécialisé en Cloud, DevOps et Développement Web.",
+    "splitsection1": {
+      "left": {
+        "title": "Hey, welcome to my portfolio",
+        "subtitle": "My name is Lucas and I am currently studying at Cy Tech, a french computing science engineering school. I am specialized into Cloud computing, and after my diploma, i want to work as a DevOps or a FullStack developper",
+        "button-text": "Contact me",
+        "button-link": "/contact",
+        "style": {
+          "bg-color": "#c6c2cd",
+          "button-bg-color":"#edb7b3",
+          "button-text-color": "#1e2130"
+        }
+      },
+      "right": {
+        "card-image-link": "/images/cards/pp.png",
+        "style": {
+          "bg-color": "#c6c2cd",
+          "button-bg-color":"#edb7b3",
+          "button-text-color": "#1e2130"
+        }
+      }
+    },
+    "splitsection2": {
+      "right": {
+        "title": "My portfolio, my personality",
+        "subtitle": "Here you can find projects about... ",
+        "type-of-projects": 
+        [
+          {
+            "id": "1",
+            "name": "FullStack development",
+            "description": "Most of my project are oriented about Fullstack world. I love building restful APIs and dynamic frontend. My favorite languages are Java and Javascript. That's why you will a lot of projects using Spring boot for the backend and node frameworks for the frontend ! However I really enjoy discovering new languages, so I am sure that you can find your favorite language among them !"
+          },
+          {
+            "id": "2",
+            "name": "Automation and deployment",
+            "description": "Then you can find projects adding github worflows. CI/CD pipelines are neccessary for DevOps today, I am trying my best to integrate them in my code. Every recent projects use docker (ready to deploy !) ."
+          },
+          {
+            "id": "3",
+            "name": "AI",
+            "description": "Finally you can also find little ai projects. It's not my favorite part of coding, but the results are amazing and its integration in code can add some importante features in an app !"
+            
+          }
+        ],
+        "style": {
+          "bg-color": "#ece9e5"
+        }
+      },
+      "left": {
+        "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        "style": {
+        }
+      }
+    },
+    
     "description": "Découvrez mes projets, mon parcours, mes compétences et mes réalisations techniques.",
     "heroImage": "/images/hero/main-banner.png",
     "cta": {
@@ -81,7 +153,7 @@
   "socials": [
     {
       "name": "GitHub",
-      "description": "Retrouvez l’ensemble de mes projets open-source.",
+      "description": "Find all my projects.",
       "url": "https://github.com/username",
       "icon": "/images/socials/github.png"
     },

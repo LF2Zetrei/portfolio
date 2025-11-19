@@ -1,27 +1,35 @@
+"use client";
+
 import React from 'react';
 
+const paddingToString = ({ top = "0", right = "0", bottom = "0", left = "0" }) =>
+  `${top} ${right} ${bottom} ${left}`;
+
 const FullSection = ({
-  height,
+  height = "auto",
   bgColor,
   bgImage,
   children,
-  padding = "none",
+  padding = { top: "0", right: "0", bottom: "0", left: "0" },
   borderTopStyle = { line: "solid", size: "2px", color: "#000" },
   borderBottomStyle = { line: "solid", size: "2px", color: "#000" },
 }) => {
-  const style = (bgColor, bgImage, padding) => ({
+  const containerHeight = typeof height === "number" ? `${height}px` : height;
+
+  const style = {
     flex: 1,
-    height: '100%',
+    height: "100%",
     backgroundColor: bgColor,
     backgroundImage: bgImage ? `url(${bgImage})` : undefined,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'relative',
-    padding: padding,
-  });
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+    padding: paddingToString(padding),
+    boxSizing: "border-box",
+  };
 
   const borderTop = `${borderTopStyle.size} ${borderTopStyle.line} ${borderTopStyle.color}`;
   const borderBottom = `${borderBottomStyle.size} ${borderBottomStyle.line} ${borderBottomStyle.color}`;
@@ -29,15 +37,15 @@ const FullSection = ({
   return (
     <section
       style={{
-        display: 'flex',
-        width: '100%',
-        height: typeof height === 'number' ? `${height}px` : height,
-        position: 'relative',
+        display: "flex",
+        width: "100%",
+        height: containerHeight,
+        position: "relative",
         borderTop,
         borderBottom,
       }}
     >
-      <div style={style(bgColor, bgImage, padding)}>{children}</div>
+      <div style={style}>{children}</div>
     </section>
   );
 };
