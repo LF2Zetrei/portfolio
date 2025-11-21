@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Button from "@/components/Button"
 import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
 
@@ -16,17 +17,37 @@ export default function Projects() {
         const isSpecial = project.id%2 == 1;
 
         const leftContent = isSpecial ? null : (
-          <div>
-            <h2>{project.title}</h2>
-            <p>{project.shortDescription}</p>
-            <Link href={`/projects/${project.slug}`}>Voir le projet</Link>
+          <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
+            <div style={{width:"70%", display:"felx", justifyContent: "flex-center", padding:"50px"}}>
+              <h2>{project.title}</h2>
+              <p>{project.short_description}</p>
+              <Button
+                    href={`/projects/${project.slug}`}
+                    text="See more"
+                    borderTBSize="1px"
+                    borderTBLine="#1e2130"
+                    borderSideLine="#1e2130"
+                    backgroundColor="#ece9e5"
+                    color="#1e2130"
+                />
+            </div>
           </div>
         );
         const rightContent = isSpecial ? (
-          <div>
-            <h2>{project.title}</h2>
-            <p>{project.shortDescription}</p>
-            <Link href={`/projects/${project.slug}`}>Voir le projet</Link>
+          <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
+            <div style={{width:"70%", display:"felx", justifyContent: "flex-center", padding:"50px"}}>
+              <h2>{project.title}</h2>
+              <p>{project.short_description}</p>
+              <Button
+                  href={`/projects/${project.slug}`}
+                  text="See more"
+                  borderTBSize="1px"
+                  borderTBLine="#1e2130"
+                  borderSideLine="#1e2130"
+                  backgroundColor="#edb7b3"
+                  color="#1e2130"
+              />
+            </div>
           </div>
         ) : null;
 
@@ -42,14 +63,16 @@ export default function Projects() {
           <SplitSection
             key={project.id}
             height={300}
-            leftBgColor="#f0f0f0"
-            rightBgColor="#f0f0f0"
+            leftBgColor="#edb7b3"
+            rightBgColor="#c1b580"
             leftBgImage={leftBgImage}
             rightBgImage={rightBgImage}
             showDivider={false}
             leftContent={leftContent}
             rightContent={rightContent}
             borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
+            leftPadding = {{ top: "100px", right: "0", bottom: "50px", left: "0" }}
+            rightPadding = {{ top: "100px", right: "0", bottom: "50px", left: "0" }}
           />
         );
       })}

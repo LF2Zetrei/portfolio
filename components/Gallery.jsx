@@ -29,7 +29,7 @@ const Gallery = ({ images }) => {
   }, [getRandomImages]);
 
   const galleryStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: "transparent",
     borderRadius: '16px',
     padding: '20px',
     display: 'flex',

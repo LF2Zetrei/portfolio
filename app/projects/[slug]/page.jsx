@@ -6,6 +6,8 @@ import Gallery from "@/components/Gallery";
 import SplitSection from "@/components/SplitSection";
 import FullSection from "@/components/FullSection";
 import CardPhoto from "../../../components/CardPhoto";
+import CardText from "../../../components/CardText";
+import Link from "next/link";
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -37,27 +39,71 @@ export default function ProjectPage() {
     <div>
       <SplitSection
             key={project.id}
-            height={500}
-            leftBgColor="#f0f0f0"
-            rightBgColor="#f0f0f0"
+            height={300}
+            leftBgColor="#c6c2cd"
+            rightBgColor="#c6c2cd"
             leftBgImage={null}
             rightBgImage={null}
             showDivider={false}
-            leftContent={<div></div>}
-            rightContent={<div></div>}
+            leftContent={
+              <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
+                <div style={{width:"70%", display:"flex",  flexFlow:"column wrap", justifyContent:"flex-start", paddingLeft:"50px"}}>
+                  <h2>{project.long_title}</h2>
+                  <p>{project.subtitle}</p>
+                </div>
+              </div>
+            }
+            rightContent={
+              <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
+                <div style={{width:"70%", alignSelf:"center", textAlign:"justify"}}>
+                  <p>{project.non_technical_description}</p>
+                  <div style={{width:"100%", display:"flex", flexDirection: "row", justifyContent: "space-around"}}>
+                    <Link href={project.github_url}>See it on github !</Link>
+                    <Link href={project.extra_url}>See it on online !</Link>
+                  </div>
+                </div>
+              </div>
+            }
             borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
-        />  
-        <FullSection
-                height="500px"
+            leftPadding = {{ top: "0", right: "0", bottom: "0", left: "0" }}
+            rightPadding = {{ top: "0", right: "0", bottom: "0", left: "0" }}
+          /> 
+          <FullSection
                 padding ="10px"
-                bgColor="white"
-                children={<Gallery images={testImages}/>}
+                bgColor="#edb7b3"
+                borderTopStyle = { {line: "solid", size: "1px", color: "#000" }}
+                borderBottomStyle = { {line: "none", size: "0", color: "#000" }}
+                children={
+                  <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
+                    <div style={{width:"70%", textAlign:"justify", justifyContent:"center"}}>
+                      <Gallery images={testImages}/>
+                      <CardText width="40%" backgroundColor="#edb7b3" justifyContent="center" alignItems="center" flexWrap="wrap">
+                        <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
+                          <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
+                            <div style={{width:"70%", justifyContent:"center", textAlign:"justify"}}>
+                              <p>{project.technical_description}</p>
+                            </div>
+                          </div>
+                        </div> 
+                      </CardText>
+                    </div>
+                  </div>
+                }
             />
+
         <FullSection
                 height="500px"
                 padding ="10px"
-                bgColor="white"
-                children={<div><CardPhoto height="400px" imageUrl={"/images/cards/pp.png"}/></div>}
+                bgColor="#ece9e5"
+                borderTopStyle = { {line: "solid", size: "1px", color: "#000" }}
+                borderBottomStyle = { {line: "none", size: "0", color: "#000" }}
+                children={<div><CardText width="500px" backgroundColor="#c1b580" justifyContent="space-around" alignItems="flex-start" flexWrap="wrap"><div style={{display:"flex", flexFlow:"column wrap", justifyContent: "flex-start", alignItems: "flex-start"}}>
+                <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
+                <div style={{width:"70%", alignSelf:"center", textAlign:"justify"}}>
+                  <p>{project.global_summary}</p>
+                </div>
+              </div>
+              </div> </CardText></div>}
             />
 
         
