@@ -8,6 +8,7 @@ import FullSection from "@/components/FullSection";
 import CardPhoto from "../../../components/CardPhoto";
 import CardText from "../../../components/CardText";
 import Link from "next/link";
+import Gap from "@/components/Gap";
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -97,9 +98,10 @@ export default function ProjectPage() {
                 bgColor="#ece9e5"
                 borderTopStyle = { {line: "solid", size: "1px", color: "#000" }}
                 borderBottomStyle = { {line: "none", size: "0", color: "#000" }}
-                children={<div><CardText width="500px" backgroundColor="#c1b580" justifyContent="space-around" alignItems="flex-start" flexWrap="wrap"><div style={{display:"flex", flexFlow:"column wrap", justifyContent: "flex-start", alignItems: "flex-start"}}>
+                children={<div><CardText width="500px" backgroundColor="#c1b580" justifyContent="space-around" alignItems="flex-start" flexWrap="wrap"><div style={{display:"flex", flexFlow:"column wrap", justifyContent: "flex-start", alignItems: "flex-start", padding: "40px 0 40px 0"}}>
                 <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
-                <div style={{width:"70%", alignSelf:"center", textAlign:"justify"}}>
+                <div style={{width:"80%", alignSelf:"center", textAlign:"justify"}}>
+                  <h4>{project.summary_title}</h4>
                   <p>{project.global_summary}</p>
                 </div>
               </div>

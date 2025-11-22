@@ -4,6 +4,7 @@ import Link from "next/link";
 import Button from "@/components/Button"
 import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
+import Gap from "@/components/Gap";
 
 export default function Projects() {
   const { projects } = useDatas();
@@ -16,11 +17,15 @@ export default function Projects() {
         
         const isSpecial = project.id%2 == 1;
 
+        const className = isSpecial ? 'slide-left' : 'slide-right';
+
         const leftContent = isSpecial ? null : (
           <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
             <div style={{width:"70%", display:"felx", justifyContent: "flex-center", padding:"50px"}}>
               <h2>{project.title}</h2>
+              <Gap></Gap>
               <p>{project.short_description}</p>
+              <Gap height="30px"></Gap>
               <Button
                     href={`/projects/${project.slug}`}
                     text="See more"
@@ -37,7 +42,9 @@ export default function Projects() {
           <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
             <div style={{width:"70%", display:"felx", justifyContent: "flex-center", padding:"50px"}}>
               <h2>{project.title}</h2>
+              <Gap></Gap>
               <p>{project.short_description}</p>
+              <Gap height="30px"></Gap>
               <Button
                   href={`/projects/${project.slug}`}
                   text="See more"
@@ -61,6 +68,7 @@ export default function Projects() {
 
         return (
           <SplitSection
+            className = {className}
             key={project.id}
             height={300}
             leftBgColor="#edb7b3"

@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import "@/transitions/transitions.css"
 
 const paddingToString = ({ top = "0", right = "0", bottom = "0", left = "0" }) =>
   `${top} ${right} ${bottom} ${left}`;
 
 const SplitSection = ({
+  className = 'none',
   leftBgColor,
   rightBgColor,
   leftBgImage,
@@ -65,6 +67,7 @@ const SplitSection = ({
 
   return (
     <section
+      className={className}
       style={{
         display: "flex",
         width: "100%",

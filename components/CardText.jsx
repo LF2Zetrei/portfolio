@@ -6,7 +6,8 @@ const CardText = ({
   alignItems,
   justifyContent,
   flexWrap,
-  width ="300px",
+  width = "300px",
+  padding = "16px",
 }) => {
   const cardStyle = {
     backgroundColor,
@@ -18,13 +19,14 @@ const CardText = ({
     justifyContent,
     flexWrap,
     width,
+    padding,
   };
 
   return (
-  <div style={cardStyle}>
-    {children}
-  </div>
-    );
+    <div style={cardStyle}>
+      {children}
+    </div>
+  );
 };
 
 export default CardText;

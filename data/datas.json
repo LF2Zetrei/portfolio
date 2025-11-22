@@ -48,7 +48,7 @@
         "type-of-projects": [
           {
             "id": "1",
-            "name": "Full-Stack Magic",
+            "name": "Full-Stack",
             "description": "Most of my projects dive deep into the Full-Stack universe. I love building clean REST APIs and dynamic frontends. Java and JavaScript are my go-to tools, so you'll find plenty of Spring Boot backends and modern JS frameworks on the frontend. But I’m always curious — chances are you’ll find a tech you love in here!"
           },
           {
@@ -75,9 +75,17 @@
   "about": {
     "title": "Need a web app ? Think about me !",
     "profileImage": "/images/cards/pp1.png",
+    "button-text": "My projects",
+    "button-link": "/projects",
+    "projects-title": "Do you want to see more ? Go check my projects !",
+    "contact-title": "A contact form ! Practical no ? ",
+    "contact-description": "I am currently looking for an opportunity in Denmark. My girlfriend is living there and i would love to find my last intership in the Hygge Country. So, please let me know if you know someone who can help me !",
     "style": {
           "bg-color-right": "#c6c2cd",
-          "bg-color-left": "#c6c2cd"
+          "bg-color-left": "#c6c2cd",
+          "button-color": "#c1b580",
+          "color":"#1e2130",
+          "borderBTLine": "#1e2130"
         }
   },
 
@@ -94,7 +102,8 @@
       "global_summary": "This authentication API is a solid foundation for secure backend systems. It demonstrates mastery of Spring Security, token-based authentication, Dockerized infrastructure, clean architecture, and CI/CD workflows. Designed in only three days, it reflects efficiency and a strong understanding of production-grade best practices.",
       "github_url": "https://github.com/liro-u/Scorejam",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 2,
@@ -108,7 +117,8 @@
       "global_summary": "Roll a Die is a polished and ambitious jam game blending action gameplay with casino aesthetics. It showcases strong teamwork, fast production, and technical abilities in AI movement, gameplay systems, and Unity development.",
       "github_url": "",
       "extra_url": "https://xref.itch.io/roll-a-die",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 3,
@@ -122,7 +132,8 @@
       "global_summary": "This project was created in one day to experiment with CI/CD, Docker setups, and front-end logic, resulting in a quirky and memorable tool blending nostalgia and technical experimentation.",
       "github_url": "https://github.com/LF2Zetrei/project_devops_ci_cd",
       "extra_url": "https://lf2zetrei.github.io/project_devops_ci_cd/",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 4,
@@ -136,7 +147,8 @@
       "global_summary": "A well-designed, lightweight Angular project showcasing first steps with routing, guards, and interactive UI design.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 5,
@@ -150,7 +162,8 @@
       "global_summary": "A concise Angular project centered on API integration and reactive programming basics, built in a single day.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 6,
@@ -164,7 +177,8 @@
       "global_summary": "This project demonstrates backend routing, ML integration, dataset handling, and automated inference using FastAPI. It blends data engineering and API development into a compact and educational tool.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 7,
@@ -178,7 +192,8 @@
       "global_summary": "This project combined NLP, RAG systems, multi-backend architecture, and user-facing educational tools. Reaching the semi-finals validated the robustness and creativity of the approach.",
       "github_url": "https://github.com/LF2Zetrei/data_battle_back",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 8,
@@ -192,7 +207,8 @@
       "global_summary": "A growing, personal tool designed to support content creation through custom automation and chat interaction.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 9,
@@ -206,7 +222,8 @@
       "global_summary": "A practical marketplace project showcasing full-stack capabilities, admin interfaces, and structured backend architecture.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 10,
@@ -220,7 +237,8 @@
       "global_summary": "A foundational project marking the beginning of my full-stack development journey.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 11,
@@ -234,7 +252,8 @@
       "global_summary": "A small but key project that built the foundation for my future backend and frontend development skills.",
       "github_url": "",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 12,
@@ -248,7 +267,8 @@
       "global_summary": "A meaningful first professional project delivered under tight deadlines, proving autonomy and real-world responsibility.",
       "github_url": "",
       "extra_url": "https://www.landes-gonflables.com/app/galerie.html",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 13,
@@ -262,7 +282,8 @@
       "global_summary": "A personal and flexible portfolio showing my current level of maturity, design sense, and long-term vision for maintainable development.",
       "github_url": "https://github.com/LF2Zetrei/portfolio",
       "extra_url": "",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     },
     {
       "id": 14,
@@ -276,7 +297,8 @@
       "global_summary": "A significant cloud computing project exploring DevOps practices, GCP services, microservice architecture, and real-world deployment pipelines.",
       "github_url": "https://github.com/LF2Zetrei/CloudInfrastructure_FernandesLucas_OrsolleEthan_CharrierSimon",
       "extra_url": "https://frontend-506788352665.europe-west1.run.app/",
-      "images": ""
+      "images": "",
+      "summary_title": "A little summary :"
     }
   ],
   
@@ -295,7 +317,7 @@
     {
       "name": "LinkedIn",
       "description": "Découvrez mon parcours académique et professionnel.",
-      "url": "https://www.linkedin.com/in/username/",
+      "url": "https://www.linkedin.com/in/lucas-fernandes-585063254/?locale=en_US",
       "icon": "/images/socials/linkedin.png",
       "style": {
         "color": "#1e2130",

@@ -3,7 +3,7 @@ import React from 'react';
 const CardPhoto = ({
   imageUrl,
   width = '300px',
-  height = '200px',
+  height = '400px',
   backgroundColor = '#eee',
 }) => {
   const cardStyle = {
