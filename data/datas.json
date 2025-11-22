@@ -21,13 +21,13 @@
   "homepage": {
     "splitsection1": {
       "left": {
-        "title": "Hey, welcome to my portfolio",
-        "subtitle": "My name is Lucas and I am currently studying at Cy Tech, a french computing science engineering school. I am specialized into Cloud computing, and after my diploma, i want to work as a DevOps or a FullStack developper",
-        "button-text": "Contact me",
+        "title": "Hey there — welcome to my world!",
+        "subtitle": "I'm Lucas, a student at CY Tech, a French engineering school specializing in computer science. Passionate about Cloud, DevOps and Full-Stack development, I'm building the skills today that will help me craft tomorrow’s digital solutions.",
+        "button-text": "Let's talk!",
         "button-link": "/contact",
         "style": {
           "bg-color": "#c6c2cd",
-          "button-bg-color":"#edb7b3",
+          "button-bg-color": "#edb7b3",
           "button-text-color": "#1e2130"
         }
       },
@@ -35,32 +35,31 @@
         "card-image-link": "/images/cards/pp1.png",
         "style": {
           "bg-color": "#c6c2cd",
-          "button-bg-color":"#edb7b3",
+          "button-bg-color": "#edb7b3",
           "button-text-color": "#1e2130"
         }
-      }
+      } 
     },
+
     "splitsection2": {
       "right": {
-        "title": "My portfolio, my personality",
-        "subtitle": "Here you can find projects about... ",
-        "type-of-projects": 
-        [
+        "title": "My portfolio — my playground",
+        "subtitle": "Explore the projects that shape who I am as a developer:",
+        "type-of-projects": [
           {
             "id": "1",
-            "name": "FullStack development",
-            "description": "Most of my project are oriented about Fullstack world. I love building restful APIs and dynamic frontend. My favorite languages are Java and Javascript. That's why you will a lot of projects using Spring boot for the backend and node frameworks for the frontend ! However I really enjoy discovering new languages, so I am sure that you can find your favorite language among them !"
+            "name": "Full-Stack Magic",
+            "description": "Most of my projects dive deep into the Full-Stack universe. I love building clean REST APIs and dynamic frontends. Java and JavaScript are my go-to tools, so you'll find plenty of Spring Boot backends and modern JS frameworks on the frontend. But I’m always curious — chances are you’ll find a tech you love in here!"
           },
           {
             "id": "2",
-            "name": "Automation and deployment",
-            "description": "Then you can find projects adding github worflows. CI/CD pipelines are neccessary for DevOps today, I am trying my best to integrate them in my code. Every recent projects use docker (ready to deploy !) ."
+            "name": "Automation & Deployment",
+            "description": "From GitHub Actions workflows to CI/CD pipelines, automation is everywhere in my work. Every recent project is Dockerized and ready to deploy! DevOps isn’t just a buzzword for me — it’s part of how I think and build."
           },
           {
             "id": "3",
-            "name": "AI",
-            "description": "Finally you can also find little ai projects. It's not my favorite part of coding, but the results are amazing and its integration in code can add some importante features in an app !"
-            
+            "name": "AI Experiments",
+            "description": "I also like to explore AI through small but impactful projects. It may not be my main focus, but I love the incredible results it can bring and how it boosts an application with powerful features."
           }
         ],
         "style": {
@@ -69,29 +68,17 @@
       },
       "left": {
         "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-        "style": {
-        }
-      }
-    },
-    
-    "description": "Découvrez mes projets, mon parcours, mes compétences et mes réalisations techniques.",
-    "heroImage": "/images/hero/main-banner.png",
-    "cta": {
-      "primary": {
-        "text": "Voir mes projets",
-        "link": "/projects"
-      },
-      "secondary": {
-        "text": "Me contacter",
-        "link": "/contact"
+        "style": {}
       }
     }
   },
-
   "about": {
-    "title": "À propos de moi",
-    "description": "Je suis ingénieur en dernière année, spécialisé dans le cloud, le développement web, l’IA et l’architecture logicielle. Passionné par les technologies modernes, j’aime construire des projets concrets permettant d’apprendre rapidement.",
-    "profileImage": "/images/about/profile.jpg"
+    "title": "Need a web app ? Think about me !",
+    "profileImage": "/images/cards/pp1.png",
+    "style": {
+          "bg-color-right": "#c6c2cd",
+          "bg-color-left": "#c6c2cd"
+        }
   },
 
   "projects": [
@@ -134,7 +121,7 @@
       "technical_description": "Built in React and containerized with Docker, this project focuses on GitHub CI/CD workflows for automated build and deployment. The UI intentionally mimics early Google designs. The custom input system increments letters programmatically instead of reading actual keyboard keys, demonstrating front-end logic manipulation.",
       "global_summary": "This project was created in one day to experiment with CI/CD, Docker setups, and front-end logic, resulting in a quirky and memorable tool blending nostalgia and technical experimentation.",
       "github_url": "https://github.com/LF2Zetrei/project_devops_ci_cd",
-      "extra_url": "",
+      "extra_url": "https://lf2zetrei.github.io/project_devops_ci_cd/",
       "images": ""
     },
     {
