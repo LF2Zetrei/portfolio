@@ -5,6 +5,7 @@ import CardPhoto from "@/components/CardPhoto"
 import { useDatas } from "@/hooks/useDatas";
 import Button from "@/components/Button";
 import Gap from "@/components/Gap";
+import FadeInSection from "@/components/FadeInSection";
 
 export default function Home() {
   const {homepage} = useDatas();
@@ -47,10 +48,12 @@ export default function Home() {
             {homepage.splitsection2.right["type-of-projects"].map((section) => {
               return (
                   <>
+                  <FadeInSection direction="left">
                     <h2>{section.name}</h2>
                     <Gap></Gap>
                     <p>{section.description}</p>
                     <Gap></Gap>
+                  </FadeInSection>
                   </>);
             })}
             <h4><Link href="/projects">Click here to see all of them !</Link></h4>

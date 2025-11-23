@@ -6,6 +6,7 @@ import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
 import Gap from "@/components/Gap";
 
+
 export default function Projects() {
   const { projects } = useDatas();
 

@@ -58,6 +58,7 @@ export default function ProjectPage() {
               <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
                 <div style={{width:"70%", alignSelf:"center", textAlign:"justify"}}>
                   <p>{project.non_technical_description}</p>
+                  <Gap height="30px"></Gap>
                   <div style={{width:"100%", display:"flex", flexDirection: "row", justifyContent: "space-around"}}>
                     <Link href={project.github_url}>See it on github !</Link>
                     <Link href={project.extra_url}>See it on online !</Link>
@@ -66,8 +67,8 @@ export default function ProjectPage() {
               </div>
             }
             borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
-            leftPadding = {{ top: "0", right: "0", bottom: "0", left: "0" }}
-            rightPadding = {{ top: "0", right: "0", bottom: "0", left: "0" }}
+            leftPadding = {{ top: "50px", right: "50px", bottom: "50px", left: "50px" }}
+            rightPadding = {{ top: "50px", right: "50px", bottom: "50px", left: "50px" }}
           /> 
           <FullSection
                 padding ="10px"

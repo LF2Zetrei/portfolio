@@ -18,11 +18,10 @@ export default function Contact() {
                     rightBgImage={null}
                     showDivider={false}
                     leftContent={
-                        <div>
-                            <h1>{about.title}</h1>
+                        <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems:"center"}}>
+                            <div style={{width: "60%", display: "flex", textAlign: "center"}}><h1>{about.title}</h1></div>  
                             <CardPhoto imageUrl={about.profileImage}></CardPhoto>
                         </div>
-                        
                       }
                     rightContent={
                         <div style={{maxWidth:"70%"}}>
@@ -39,7 +38,7 @@ export default function Contact() {
             padding ="10px"
             bgColor="white"
             bgImage="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-            children={<div>
+            children={<div style={{display: "flex", flexFlow: "column wrap", alignItems: "center"}}>
                 <h1>{about["projects-title"]}</h1>
                 <Gap height="75px"></Gap>
                 <Button
