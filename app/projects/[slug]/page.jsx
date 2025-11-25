@@ -38,56 +38,29 @@ export default function ProjectPage() {
 
   return (
     <div>
-      <SplitSection
-            key={project.id}
-            height={300}
-            leftBgColor="#c6c2cd"
-            rightBgColor="#c6c2cd"
-            leftBgImage={null}
-            rightBgImage={null}
-            showDivider={false}
-            leftContent={
-              <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
-                <div style={{width:"70%", display:"flex",  flexFlow:"column wrap", justifyContent:"flex-start", paddingLeft:"50px"}}>
-                  <h2>{project.long_title}</h2>
-                  <p>{project.subtitle}</p>
-                </div>
-              </div>
-            }
-            rightContent={
-              <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
-                <div style={{width:"70%", alignSelf:"center", textAlign:"justify"}}>
-                  <p>{project.non_technical_description}</p>
-                  <Gap height="30px"></Gap>
-                  <div style={{width:"100%", display:"flex", flexDirection: "row", justifyContent: "space-around"}}>
-                    <Link href={project.github_url}>See it on github !</Link>
-                    <Link href={project.extra_url}>See it on online !</Link>
-                  </div>
-                </div>
-              </div>
-            }
-            borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
-            leftPadding = {{ top: "50px", right: "50px", bottom: "50px", left: "50px" }}
-            rightPadding = {{ top: "50px", right: "50px", bottom: "50px", left: "50px" }}
-          /> 
           <FullSection
                 padding ="10px"
                 bgColor="#edb7b3"
                 borderTopStyle = { {line: "solid", size: "1px", color: "#000" }}
                 borderBottomStyle = { {line: "none", size: "0", color: "#000" }}
                 children={
-                  <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
-                    <div style={{width:"70%", textAlign:"justify", justifyContent:"center"}}>
-                      <Gallery images={testImages}/>
-                      <CardText width="40%" backgroundColor="#edb7b3" justifyContent="center" alignItems="center" flexWrap="wrap">
-                        <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
-                          <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center"}}>
-                            <div style={{width:"70%", justifyContent:"center", textAlign:"justify"}}>
-                              <p>{project.technical_description}</p>
-                            </div>
-                          </div>
-                        </div> 
-                      </CardText>
+                  <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "center", padding: "40px 50px 40px 50px"}}>
+                    <div style={{width: "100%", display: "flex", flexDirection: "row"}}>
+                      <div style={{width: "30%"}}>
+                        <h2>{project.long_title}</h2>
+                        <p>{project.subtitle}</p>
+                        <Gap></Gap>
+                        <p>{project.non_technical_description}</p>
+                        <Gap></Gap>
+                        <p>{project.technical_description}</p>
+                      </div>
+                      <div style={{width: "70%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", paddingLeft: "30px"}}>
+                        <Gallery images={testImages}/>
+                        <div style={{width:"100%", display:"flex", flexDirection: "row", justifyContent: "space-around"}}>
+                          <Link href={project.github_url}>See it on github !</Link>
+                          <Link href={project.extra_url}>See it on online !</Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 }
@@ -99,10 +72,11 @@ export default function ProjectPage() {
                 bgColor="#ece9e5"
                 borderTopStyle = { {line: "solid", size: "1px", color: "#000" }}
                 borderBottomStyle = { {line: "none", size: "0", color: "#000" }}
-                children={<div><CardText width="500px" backgroundColor="#c1b580" justifyContent="space-around" alignItems="flex-start" flexWrap="wrap"><div style={{display:"flex", flexFlow:"column wrap", justifyContent: "flex-start", alignItems: "flex-start", padding: "40px 0 40px 0"}}>
+                children={<div><CardText width="500px" backgroundColor="#c1b580" justifyContent="space-around" alignItems="flex-start" flexWrap="wrap"><div style={{display:"flex", flexFlow:"column wrap", justifyContent: "flex-start", alignItems: "flex-start", padding: "20px 0 40px 0"}}>
                 <div style={{display:"flex", flexFlow:"column wrap", justifyContent: "center", alignItems: "flex-start"}}>
                 <div style={{width:"80%", alignSelf:"center", textAlign:"justify"}}>
                   <h4>{project.summary_title}</h4>
+                  <Gap></Gap>
                   <p>{project.global_summary}</p>
                 </div>
               </div>
