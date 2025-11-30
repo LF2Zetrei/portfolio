@@ -12,6 +12,8 @@ export default function Footer({
   const { socials, footer } = useDatas();
 
   return (
+    <div style= {{display: "flex", alignItems:"center", flexDirection: "column"}}>
+
     <div
       style={{
         display: "flex",
@@ -34,6 +36,8 @@ export default function Footer({
           descriptionColor={s.style.color}
         />
       ))}
+      </div>
+      <p>© Thank you Pierre for the illustration.</p>
     </div>
   );
 }
