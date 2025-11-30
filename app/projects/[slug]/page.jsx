@@ -20,6 +20,8 @@ export default function ProjectPage() {
 
   if (!project) return <p>Projet non trouvé</p>;
 
+  const images = project.images;
+
   const testImages = [
 
     'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
@@ -55,7 +57,7 @@ export default function ProjectPage() {
                         <p>{project.technical_description}</p>
                       </div>
                       <div style={{width: "70%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", paddingLeft: "30px"}}>
-                        <Gallery images={testImages}/>
+                        <Gallery images={images}/>
                         <div style={{width:"100%", display:"flex", flexDirection: "row", justifyContent: "space-around"}}>
                           <Link href={project.github_url}>See it on github !</Link>
                           <Link href={project.extra_url}>See it on online !</Link>

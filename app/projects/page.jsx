@@ -60,12 +60,12 @@ export default function Projects() {
         ) : null;
 
         const leftBgImage = isSpecial
-          ? "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+          ? project.images[0]
           : "";
 
         const rightBgImage = isSpecial
           ? ""
-          : "https://images.unsplash.com/photo-1506744038136-46273834b3fb";
+          : project.images[0];
 
         return (
           <SplitSection

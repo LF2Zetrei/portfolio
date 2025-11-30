@@ -9,8 +9,8 @@ const ContactForm = ({
   backgroundColor = '#fff',
   buttonColor = '#222',
   buttonHoverColor = '#000',
-  labels = { name: 'Nom', email: 'Email', message: 'Message / Demande' },
-  buttonText = 'Envoyer',
+  labels = { name: 'Name', email: 'Email', message: 'Message' },
+  buttonText = 'Send',
   description, // New prop for description section
 }) => {
   const formRef = useRef();

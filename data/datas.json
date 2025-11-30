@@ -73,21 +73,22 @@
     }
   },
   "about": {
-    "title": "Need a web app ? Think about me !",
-    "profileImage": "/images/cards/pp1.png",
-    "button-text": "My projects",
-    "button-link": "/projects",
-    "projects-title": "Do you want to see more ? Go check my projects !",
-    "contact-title": "A contact form ! Practical no ? ",
-    "contact-description": "I am currently looking for an opportunity in Denmark. My girlfriend is living there and i would love to find my last intership in the Hygge Country. So, please let me know if you know someone who can help me !",
-    "style": {
-          "bg-color-right": "#c6c2cd",
-          "bg-color-left": "#c6c2cd",
-          "button-color": "#c1b580",
-          "color":"#1e2130",
-          "borderBTLine": "#1e2130"
-        }
+  "title": "Looking for a Web App? I'm Your Developer!",
+  "profileImage": "/images/cards/pp1.png",
+  "button-text": "Explore My Projects",
+  "button-link": "/projects",
+  "projects-title": "Want to See More? Check Out My Work!",
+  "contact-title": "Get in Touch",
+  "contact-description": "I am currently seeking an internship opportunity in Denmark. My girlfriend lives there, and I would love to complete my final internship in the heart of the Hygge culture. If you know someone who could help—or if you're recruiting—I'd be happy to connect!",
+  "style": {
+    "bg-color-right": "#c6c2cd",
+    "bg-color-left": "#c6c2cd",
+    "button-color": "#c1b580",
+    "color": "#1e2130",
+    "borderBTLine": "#1e2130"
+    }
   },
+
 
   "projects": [
     {
@@ -102,7 +103,7 @@
       "global_summary": "This authentication API is a solid foundation for secure backend systems. It demonstrates mastery of Spring Security, token-based authentication, Dockerized infrastructure, clean architecture, and CI/CD workflows. Designed in only three days, it reflects efficiency and a strong understanding of production-grade best practices.",
       "github_url": "https://github.com/liro-u/Scorejam",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/auth_api/login_success.png", "/images/auth_api/architecture.png", "/images/auth_api/get_user_failure.png", "/images/auth_api/get_user_success.png", "/images/auth_api/jwt_endpoints.png", "/images/auth_api/jwt_service.png", "/images/auth_api/logout_success.png", "/images/auth_api/refresh_success.png", "/images/auth_api/register_already_exists.png", "/images/auth_api/register_success.png", "/images/auth_api/request_dto_verif.png", "/images/auth_api/request_dto.png", "/images/auth_api/test_http.png", "/images/auth_api/test.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -117,7 +118,7 @@
       "global_summary": "Roll a Die is a polished and ambitious jam game blending action gameplay with casino aesthetics. It showcases strong teamwork, fast production, and technical abilities in AI movement, gameplay systems, and Unity development.",
       "github_url": "",
       "extra_url": "https://xref.itch.io/roll-a-die",
-      "images": "",
+      "images": ["/images/roll_a_die/winning_screen.png", "/images/roll_a_die/credits.png", "/images/roll_a_die/in_game_screen.png", "/images/roll_a_die/leader_board.png", "/images/roll_a_die/lose_screen.png", "/images/roll_a_die/screen_name.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -132,7 +133,7 @@
       "global_summary": "This project was created in one day to experiment with CI/CD, Docker setups, and front-end logic, resulting in a quirky and memorable tool blending nostalgia and technical experimentation.",
       "github_url": "https://github.com/LF2Zetrei/project_devops_ci_cd",
       "extra_url": "https://lf2zetrei.github.io/project_devops_ci_cd/",
-      "images": "",
+      "images": ["/images/ci_cd/wrapper.png", "/images/ci_cd/actions.png", "/images/ci_cd/code_1.png", "/images/ci_cd/code_2.png", "/images/ci_cd/code_3.png", "/images/ci_cd/lucky.png", "/images/ci_cd/workflow.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -147,7 +148,7 @@
       "global_summary": "A well-designed, lightweight Angular project showcasing first steps with routing, guards, and interactive UI design.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/memory/two_showed_card.png", "/images/memory/auth_guard.png", "/images/memory/code_auth.png", "/images/memory/connexion_screen.png", "/images/memory/header.png", "/images/memory/hidden_board.png", "/images/memory/memory_code1.png", "/images/memory/use_code.png", "/images/memory/win_screen.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -162,7 +163,7 @@
       "global_summary": "A concise Angular project centered on API integration and reactive programming basics, built in a single day.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/chuck_norris/chuck_norris_joke_full.png", "/images/chuck_norris/change_joke_and_add_in_store.png", "/images/chuck_norris/chuck_norris_joke_without_cat.png", "/images/chuck_norris/elf_store.png", "/images/chuck_norris/init_and_var.png", "/images/chuck_norris/jokes_by_cat.png", "/images/chuck_norris/jokes_by_cat_2.png", "/images/chuck_norris/jokes_by_key_words.png", "/images/chuck_norris/options_section.png", "/images/chuck_norris/set_cat_and_observable_function.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -177,7 +178,7 @@
       "global_summary": "This project demonstrates backend routing, ML integration, dataset handling, and automated inference using FastAPI. It blends data engineering and API development into a compact and educational tool.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/wine_fastapi/after_login.png", "/images/wine_fastapi/auth_code.png", "/images/wine_fastapi/datas.png", "/images/wine_fastapi/failure_answer.png", "/images/wine_fastapi/fast_api_doc.png", "/images/wine_fastapi/get_model_info.png", "/images/wine_fastapi/login.png", "/images/wine_fastapi/model_code.png", "/images/wine_fastapi/predict_quality.png", "/images/wine_fastapi/predict_wine.png", "/images/wine_fastapi/request_code.png", "/images/wine_fastapi/routes.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -192,7 +193,7 @@
       "global_summary": "This project combined NLP, RAG systems, multi-backend architecture, and user-facing educational tools. Reaching the semi-finals validated the robustness and creativity of the approach.",
       "github_url": "https://github.com/LF2Zetrei/data_battle_back",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/ia_pau/ia_pau.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -207,13 +208,13 @@
       "global_summary": "A growing, personal tool designed to support content creation through custom automation and chat interaction.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/catbut_/code_commands_1.png","/images/catbut_/code_commands_2.png","/images/catbut_/twitch_chat_1.png", "/images/catbut_/twitch_chat_2.png", "/images/catbut_/twitch_chat_3.png", "/images/catbut_/twitch_chat_4.png"],
       "summary_title": "A little summary :"
     },
     {
       "id": 9,
-      "slug": "corporation-marketplace",
-      "title": "Corporation Marketplace",
+      "slug": "corpauration-marketplace",
+      "title": "Corpauration Marketplace",
       "long_title": "A Full Marketplace for a School Association",
       "subtitle": "Complete product management + auth + admin dashboard.",
       "short_description": "A complete marketplace allowing users to browse products and admins to manage stock, prices, and catalog items.",
@@ -222,7 +223,7 @@
       "global_summary": "A practical marketplace project showcasing full-stack capabilities, admin interfaces, and structured backend architecture.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/corpauration/front.png", "/images/corpauration/add_product.png", "/images/corpauration/basket.png", "/images/corpauration/code_1.png", "/images/corpauration/code_2.png", "/images/corpauration/code_3.png", "/images/corpauration/code_4.png", "/images/corpauration/info.png", "/images/corpauration/modify.png", "/images/corpauration/products.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -237,7 +238,7 @@
       "global_summary": "A foundational project marking the beginning of my full-stack development journey.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/portfolio_v1/home_page.png", "/images/portfolio_v1/card.png", "/images/portfolio_v1/card2.png", "/images/portfolio_v1/header.png", "/images/portfolio_v1/language_selector.png", "/images/portfolio_v1/project_page.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -252,7 +253,7 @@
       "global_summary": "A small but key project that built the foundation for my future backend and frontend development skills.",
       "github_url": "",
       "extra_url": "",
-      "images": "",
+      "images": ["/images/todo/todo.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -267,26 +268,11 @@
       "global_summary": "A meaningful first professional project delivered under tight deadlines, proving autonomy and real-world responsibility.",
       "github_url": "",
       "extra_url": "https://www.landes-gonflables.com/app/galerie.html",
-      "images": "",
+      "images": ["/images/landes_gonflables/contact_form.png", "/images/landes_gonflables/card.png","/images/landes_gonflables/carrousel.png", "/images/landes_gonflables/devis.png","/images/landes_gonflables/galery.png","/images/landes_gonflables/home_page_1.png","/images/landes_gonflables/tarifs.png"],
       "summary_title": "A little summary :"
     },
     {
       "id": 13,
-      "slug": "portfolio-v2",
-      "title": "Portfolio v2",
-      "long_title": "A Modular and Extensible Next.js Portfolio",
-      "subtitle": "Built in 1 week — designed for long-term evolution.",
-      "short_description": "A modern Next.js portfolio with multilingual support, theme context, reusable components, and modular architecture.",
-      "non_technical_description": "This portfolio represents who I am today, both technically and personally. It adapts easily to new projects and presents my work in a clean and elegant way.",
-      "technical_description": "Built with Next.js using a well-structured architecture: app directory, reusable components, hooks, context, data modules, and public assets. Includes theme and language contexts, custom hooks for data retrieval, and a modular design allowing API replacement without code restructuring.",
-      "global_summary": "A personal and flexible portfolio showing my current level of maturity, design sense, and long-term vision for maintainable development.",
-      "github_url": "https://github.com/LF2Zetrei/portfolio",
-      "extra_url": "",
-      "images": "",
-      "summary_title": "A little summary :"
-    },
-    {
-      "id": 14,
       "slug": "pokedex-gcp",
       "title": "Pokédex Cloud Platform",
       "long_title": "A CI/CD-Powered Pokédex Deployed on Google Cloud",
@@ -297,7 +283,7 @@
       "global_summary": "A significant cloud computing project exploring DevOps practices, GCP services, microservice architecture, and real-world deployment pipelines.",
       "github_url": "https://github.com/LF2Zetrei/CloudInfrastructure_FernandesLucas_OrsolleEthan_CharrierSimon",
       "extra_url": "https://frontend-506788352665.europe-west1.run.app/",
-      "images": "",
+      "images": ["/images/pokedex/full_screen_number.png", "/images/pokedex/card.png", "/images/pokedex/full_screen_element.png", "/images/pokedex/full_screen_element_poke.png", "/images/pokedex/full_screen_name.png", "/images/pokedex/full_screen_name_poke.png"],
       "summary_title": "A little summary :"
     }
   ],
@@ -315,10 +301,10 @@
       }
     },
     {
-      "name": "LinkedIn",
-      "description": "Découvrez mon parcours académique et professionnel.",
-      "url": "https://www.linkedin.com/in/lucas-fernandes-585063254/?locale=en_US",
-      "icon": "/images/socials/linkedin.png",
+      "name": "CV",
+      "description": "My resume, professional experiences and more about me.",
+      "url": "/cv/cv_Lucas_Fernandes_2025.pdf",
+      "icon": "/images/socials/cv.png",
       "style": {
         "color": "#1e2130",
         "name-color": "#1e2130",
@@ -326,10 +312,10 @@
       }
     },
     {
-      "name": "CV",
-      "description": "My resume, professional experiences and more about me.",
-      "url": "https://twitter.com/username",
-      "icon": "/images/socials/cv.png",
+      "name": "LinkedIn",
+      "description": "Découvrez mon parcours académique et professionnel.",
+      "url": "https://www.linkedin.com/in/lucas-fernandes-585063254/?locale=en_US",
+      "icon": "/images/socials/linkedin.png",
       "style": {
         "color": "#1e2130",
         "name-color": "#1e2130",
@@ -343,5 +329,22 @@
       "bg-color": "#c6c2cd",
       "padding": "10px"
     }
-  }
+  },
+  "comments" : [
+    {
+      "id": 13,
+      "slug": "portfolio-v2",
+      "title": "Portfolio v2",
+      "long_title": "A Modular and Extensible Next.js Portfolio",
+      "subtitle": "Built in 1 week — designed for long-term evolution.",
+      "short_description": "A modern Next.js portfolio with multilingual support, theme context, reusable components, and modular architecture.",
+      "non_technical_description": "This portfolio represents who I am today, both technically and personally. It adapts easily to new projects and presents my work in a clean and elegant way.",
+      "technical_description": "Built with Next.js using a well-structured architecture: app directory, reusable components, hooks, context, data modules, and public assets. Includes theme and language contexts, custom hooks for data retrieval, and a modular design allowing API replacement without code restructuring.",
+      "global_summary": "A personal and flexible portfolio showing my current level of maturity, design sense, and long-term vision for maintainable development.",
+      "github_url": "https://github.com/LF2Zetrei/portfolio",
+      "extra_url": "",
+      "images": [""],
+      "summary_title": "A little summary :"
+    }
+  ]
 }

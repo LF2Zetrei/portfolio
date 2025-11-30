@@ -37,9 +37,9 @@ export default function Media({
           cursor: "pointer",
         }}
       >
-        <Link href={url} legacyBehavior>
+        <Link href={url} legacyBehavior target="_blank" rel="noopener noreferrer">
           <a>
-            <Image src={icon} alt={name} width={32} height={32} />
+            <Image src={icon} alt={name} width={70} height={70} />
           </a>
         </Link>
       </div>
