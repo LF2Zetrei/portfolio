@@ -93,12 +93,12 @@ const ContactForm = ({
       )
       .then(
         (result) => {
-          alert('Message envoyé !');
+          alert('Message sent !');
           formRef.current.reset();
         },
         (error) => {
           console.error(error.text);
-          alert('Erreur lors de l’envoi, réessaie.');
+          alert('Error while sending, please try again.');
         }
       );
   };
