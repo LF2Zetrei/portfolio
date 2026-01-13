@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Button = ({
   href,
   backgroundColor = '#0070f3',
-  width = '120px',
+  width = '140px',
   height = '40px',
   text = 'Click me',
   color = '#fff',

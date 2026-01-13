@@ -42,6 +42,8 @@ export default function Contact() {
                 <h1>{about["projects-title"]}</h1>
                 <Gap height="75px"></Gap>
                 <Button
+                    height="60px"
+                    width="180px"
                     href={about["button-link"]}
                     text={about["button-text"]}
                     borderTBSize="1px"
