@@ -4,6 +4,7 @@ import CardPhoto from "@/components/CardPhoto";
 import { useDatas } from "@/hooks/useDatas";
 import Button from "@/components/Button";
 import FadeInSection from "@/components/FadeInSection";
+import FullSection from "@/components/FullSection";
 
 export default function Home() {
   const { homepage } = useDatas();
@@ -44,23 +45,39 @@ export default function Home() {
         rightPadding={{ top: "50px", right: "20px", bottom: "50px", left: "20px" }}
       />
 
-      {/* Section 2 — Types de projets + image de fond */}
+      {/* === MOBILE : Section 2 sans image de fond === */}
+      <FullSection
+        bgColor={homepage.splitsection2.right.style["bg-color"]}
+        borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
+        className="md:hidden"
+      >
+        <div className="w-full px-4 py-8">
+          {homepage.splitsection2.right["type-of-projects"].map((section) => (
+            <FadeInSection key={section.id} direction="left">
+              <h2 className="text-xl font-bold mt-6">{section.name}</h2>
+              <p className="mt-2 text-sm">{section.description}</p>
+            </FadeInSection>
+          ))}
+          <h4 className="mt-8 text-base">
+            <Link href="/projects">Click here to see all of them !</Link>
+          </h4>
+        </div>
+      </FullSection>
+
+      {/* === DESKTOP : Section 2 avec image de fond === */}
       <SplitSection
         rightBgColor={homepage.splitsection2.right.style["bg-color"]}
         leftBgColor="#ddd"
         leftBgImage={homepage.splitsection2.left.image}
         showDivider={false}
         leftContent={null}
+        className="hidden md:flex"
         rightContent={
           <div className="w-full px-4 md:px-12 py-8">
             {homepage.splitsection2.right["type-of-projects"].map((section) => (
               <FadeInSection key={section.id} direction="left">
-                <h2 className="text-xl md:text-2xl font-bold mt-6">
-                  {section.name}
-                </h2>
-                <p className="mt-2 text-sm md:text-base">
-                  {section.description}
-                </p>
+                <h2 className="text-xl md:text-2xl font-bold mt-6">{section.name}</h2>
+                <p className="mt-2 text-sm md:text-base">{section.description}</p>
               </FadeInSection>
             ))}
             <h4 className="mt-8 text-base md:text-lg">
@@ -68,7 +85,6 @@ export default function Home() {
             </h4>
           </div>
         }
-        rightPadding={{ top: "50px", right: "40px", bottom: "50px", left: "40px" }}
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
       />
     </>

@@ -4,8 +4,9 @@ import React from "react";
 const FullSection = ({
   height = "auto",
   bgColor,
-  bgImage,
+  bgImage = "",
   children,
+  className = "",
   borderTopStyle = { line: "solid", size: "2px", color: "#000" },
   borderBottomStyle = { line: "solid", size: "2px", color: "#000" },
 }) => {
@@ -15,7 +16,7 @@ const FullSection = ({
 
   return (
     <section
-      className="w-full flex"
+      className={`w-full flex ${className}`}
       style={{ height: containerHeight, borderTop, borderBottom, position: "relative" }}
     >
       <div
