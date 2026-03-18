@@ -45,7 +45,7 @@ export default function ProjectPage() {
             <Link
               href={project.extra_url}
               target="_blank"
-              className="px-5 py-2 rounded-full bg-[#1e2130] text-sm font-medium text-white hover:opacity-80 transition-opacity"
+              className="px-5 py-2 rounded-full border border-[#1e2130] text-sm font-medium text-[#1e2130] hover:bg-[#1e2130] hover:text-white transition-colors"
             >
               See it live →
             </Link>
