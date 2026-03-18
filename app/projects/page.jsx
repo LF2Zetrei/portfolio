@@ -2,15 +2,26 @@
 import Button from "@/components/Button";
 import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
+import { useEffect, useState } from "react";
 
 export default function Projects() {
   const { projects } = useDatas();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   if (!projects) return <p>Chargement...</p>;
 
   return (
     <div className="w-full">
       {projects.map((project) => {
-        const isSpecial = project.id % 2 === 1;
+        const isSpecial = project.id % 2 === 1 && !isMobile; 
 
         const projectContent = (bgColor) => (
           <div className="flex flex-col justify-center items-start w-full px-6 py-10 md:px-12 md:py-16 md:w-4/5">

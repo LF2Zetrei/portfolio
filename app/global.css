@@ -21,3 +21,11 @@ a {
 :root {
   --primary-color: #1d4ed8;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}

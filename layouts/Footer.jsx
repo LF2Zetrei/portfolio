@@ -11,7 +11,7 @@ export default function Footer({ backgroundColor = "#fff" }) {
       className="w-full flex flex-col items-center py-4"
     >
       {/* Socials */}
-      <div className="flex flex-wrap justify-center items-center gap-4 w-full px-4 md:px-12">
+      <div className="flex flex-nowrap justify-around items-center w-full px-2 md:px-12">
         {socials.map((s, index) => (
           <Media
             key={index}
@@ -21,6 +21,7 @@ export default function Footer({ backgroundColor = "#fff" }) {
             iconColor={s.style["icon-color"]}
             nameColor={s.style["name-color"]}
             descriptionColor={s.style.color}
+            small={true}
           />
         ))}
       </div>
