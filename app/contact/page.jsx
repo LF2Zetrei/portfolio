@@ -25,7 +25,7 @@ export default function Contact() {
           </div>
         }
         rightContent={
-          <div className="w-full max-w-md px-2 py-7">
+          <div className="w-full max-w-md px-4 py-8">
             <ContactForm
               title={about["contact-title"]}
               description={about["contact-description"]}
