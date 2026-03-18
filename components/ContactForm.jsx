@@ -11,79 +11,14 @@ const ContactForm = ({
   buttonHoverColor = '#000',
   labels = { name: 'Name', email: 'Email', message: 'Message' },
   buttonText = 'Send',
-  description, // New prop for description section
+  description,
 }) => {
   const formRef = useRef();
-
   const [isButtonHovered, setIsButtonHovered] = useState(false);
   const [focusedInput, setFocusedInput] = useState(null);
 
-  const formStyle = {
-    backgroundColor,
-    borderRadius: '8px',
-    padding: '24px',
-    maxWidth: '400px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-    fontFamily: 'Arial, sans-serif',
-    color: '#222',
-    margin: '0 auto',
-  };
-
-  const labelStyle = {
-    display: 'block',
-    fontWeight: '600',
-    marginBottom: '8px',
-    fontSize: '0.9rem',
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '10px 14px',
-    marginBottom: '20px',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-    fontSize: '1rem',
-    boxSizing: 'border-box',
-    transition: 'border-color 0.3s',
-  };
-
-  const textareaStyle = { ...inputStyle, minHeight: '80px', resize: 'vertical' };
-
-  const inputFocusStyle = {
-    borderColor: '#333',
-    outline: 'none',
-  };
-
-  const buttonStyle = {
-    backgroundColor: buttonColor,
-    color: '#fff',
-    border: 'none',
-    padding: '12px 24px',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    fontWeight: '600',
-    fontSize: '1rem',
-    width: '100%',
-    transition: 'background-color 0.3s',
-  };
-
-  const buttonHoverStyle = {
-    backgroundColor: buttonHoverColor,
-  };
-
-  const descriptionStyle = {
-    marginTop: '24px',
-    paddingTop: '16px',
-    borderTop: '1px solid #ccc',
-    fontSize: '0.9rem',
-    color: '#555',
-    fontFamily: 'Arial, sans-serif',
-    whiteSpace: 'pre-wrap',
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
@@ -92,8 +27,8 @@ const ContactForm = ({
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          alert('Message sent !');
+        () => {
+          alert('Message sent!');
           formRef.current.reset();
         },
         (error) => {
@@ -103,30 +38,35 @@ const ContactForm = ({
       );
   };
 
+  const inputClass = (field) =>
+    `w-full px-3 py-2 mb-5 rounded border text-base box-border transition-colors duration-300 outline-none
+     ${focusedInput === field ? 'border-gray-700' : 'border-gray-300'}`;
+
   return (
-    <div style={{ padding: '24px' }}>
+    <div className="w-full px-5 py-7 md:px-6">
+
+      {/* Titre */}
       {title && (
-        <h2
-          style={{
-            textAlign: 'center',
-            marginBottom: '24px',
-            fontFamily: 'Arial, sans-serif',
-            color: '#222',
-            fontWeight: '700',
-          }}
-        >
+        <h2 className="text-center text-xl md:text-2xl font-bold mb-6 text-[#222]">
           {title}
         </h2>
       )}
-      <form ref={formRef} style={formStyle} onSubmit={handleSubmit} noValidate>
-        <label style={labelStyle} htmlFor="name">
+
+      {/* Formulaire */}
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        noValidate
+        style={{ backgroundColor }}
+        className="w-full rounded-lg p-6 shadow-md box-border mx-auto
+                   max-w-full sm:max-w-sm md:max-w-md"
+      >
+        {/* Nom */}
+        <label className="block font-semibold mb-2 text-sm" htmlFor="name">
           {labels.name}
         </label>
         <input
-          style={{
-            ...inputStyle,
-            ...(focusedInput === 'name' ? inputFocusStyle : {}),
-          }}
+          className={inputClass('name')}
           type="text"
           id="name"
           name="name"
@@ -135,14 +75,12 @@ const ContactForm = ({
           onBlur={() => setFocusedInput(null)}
         />
 
-        <label style={labelStyle} htmlFor="email">
+        {/* Email */}
+        <label className="block font-semibold mb-2 text-sm" htmlFor="email">
           {labels.email}
         </label>
         <input
-          style={{
-            ...inputStyle,
-            ...(focusedInput === 'email' ? inputFocusStyle : {}),
-          }}
+          className={inputClass('email')}
           type="email"
           id="email"
           name="email"
@@ -151,14 +89,12 @@ const ContactForm = ({
           onBlur={() => setFocusedInput(null)}
         />
 
-        <label style={labelStyle} htmlFor="message">
+        {/* Message */}
+        <label className="block font-semibold mb-2 text-sm" htmlFor="message">
           {labels.message}
         </label>
         <textarea
-          style={{
-            ...textareaStyle,
-            ...(focusedInput === 'message' ? inputFocusStyle : {}),
-          }}
+          className={`${inputClass('message')} min-h-[80px] resize-y`}
           id="message"
           name="message"
           required
@@ -166,15 +102,26 @@ const ContactForm = ({
           onBlur={() => setFocusedInput(null)}
         />
 
+        {/* Bouton */}
         <button
           type="submit"
-          style={isButtonHovered ? { ...buttonStyle, ...buttonHoverStyle } : buttonStyle}
+          style={{
+            backgroundColor: isButtonHovered ? buttonHoverColor : buttonColor,
+          }}
+          className="w-full py-3 px-6 rounded font-semibold text-base text-white
+                     border-none cursor-pointer transition-colors duration-300"
           onMouseEnter={() => setIsButtonHovered(true)}
           onMouseLeave={() => setIsButtonHovered(false)}
         >
           {buttonText}
         </button>
-        {description && <div style={descriptionStyle}>{description}</div>}
+
+        {/* Description */}
+        {description && (
+          <div className="mt-6 pt-4 border-t border-gray-300 text-sm text-gray-500 whitespace-pre-wrap">
+            {description}
+          </div>
+        )}
       </form>
     </div>
   );

@@ -13,62 +13,47 @@ export default function Media({
 }) {
   return (
     <div
-      style={{
-        backgroundColor,
-        padding: "24px",
-        borderRadius: "8px",
-        width: "fit-content",
-        textAlign: "center",
-        color: nameColor,
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      }}
+      style={{ backgroundColor }}
+      className="flex flex-col items-center text-center p-4 rounded-lg w-fit max-w-full box-border"
     >
-      <div
-        style={{
-          marginBottom: "16px",
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "64px",
-          height: "64px",
-          borderRadius: "50%",
-          border: `2px solid ${iconColor}`,
-          color: iconColor,
-          cursor: "pointer",
-        }}
+      {/* Icône — pas de cercle, l'image est déjà ronde */}
+      <Link
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-4 inline-flex items-center justify-center
+                  cursor-pointer hover:opacity-80 transition-opacity"
       >
-        <Link href={url} legacyBehavior target="_blank" rel="noopener noreferrer">
-          <a>
-            <Image src={icon} alt={name} width={70} height={70} />
-          </a>
-        </Link>
-      </div>
+        <Image
+          src={icon}
+          alt={name}
+          width={64}
+          height={64}
+          style={{ objectFit: "contain" }}
+          className="w-16 h-16 rounded-full"
+        />
+      </Link>
 
-      <h2
-        style={{
-          margin: "0 0 8px",
-          fontWeight: "600",
-          fontSize: "1.25rem",
-          color: nameColor,
-          cursor: "pointer",
-        }}
-      >
-        <Link href={url} legacyBehavior>
-          <a style={{ color: nameColor, textDecoration: "none" }}>{name}</a>
+      {/* Nom */}
+      <h2 className="m-0 mb-2 font-semibold text-lg md:text-xl leading-tight">
+        <Link
+          href={url}
+          style={{ color: nameColor }}
+          className="no-underline hover:opacity-80 transition-opacity"
+        >
+          {name}
         </Link>
       </h2>
 
-      <h3
-        style={{
-          margin: 0,
-          fontWeight: "400",
-          fontSize: "0.9rem",
-          color: descriptionColor,
-          fontStyle: "normal",
-        }}
-      >
-        {description}
-      </h3>
+      {/* Description */}
+      {description && (
+        <h3
+          style={{ color: descriptionColor }}
+          className="m-0 font-normal text-sm not-italic"
+        >
+          {description}
+        </h3>
+      )}
     </div>
   );
 }

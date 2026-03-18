@@ -1,43 +1,34 @@
 "use client";
-
 import { useDatas } from "@/hooks/useDatas";
 import Media from "@/components/Media";
 
-export default function Footer({
-  backgroundColor = "#fff",
-  paddingLeft = "20px",
-  paddingRight = "20px",
-  gap = "15px",
-}) {
-  const { socials, footer } = useDatas();
+export default function Footer({ backgroundColor = "#fff" }) {
+  const { socials } = useDatas();
 
   return (
-    <div style= {{display: "flex", alignItems:"center", flexDirection: "column"}}>
-
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        paddingLeft,
-        paddingRight,
-        gap,
-        boxSizing: "border-box",
-        backgroundColor,
-      }}
+    <footer
+      style={{ backgroundColor }}
+      className="w-full flex flex-col items-center py-4"
     >
-      {socials.map((s, index) => (
-        <Media
-          key={index}
-          url={s.url}
-          icon={s.icon}
-          name={s.name}
-          iconColor={s.style["icon-color"]}
-          nameColor={s.style["name-color"]}
-          descriptionColor={s.style.color}
-        />
-      ))}
+      {/* Socials */}
+      <div className="flex flex-wrap justify-center items-center gap-4 w-full px-4 md:px-12">
+        {socials.map((s, index) => (
+          <Media
+            key={index}
+            url={s.url}
+            icon={s.icon}
+            name={s.name}
+            iconColor={s.style["icon-color"]}
+            nameColor={s.style["name-color"]}
+            descriptionColor={s.style.color}
+          />
+        ))}
       </div>
-      <p>© Thank you Pierre for the illustration.</p>
-    </div>
+
+      {/* Copyright */}
+      <p className="text-center text-sm px-4 mt-2">
+        © Thank you Pierre for the illustration.
+      </p>
+    </footer>
   );
 }

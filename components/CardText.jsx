@@ -6,24 +6,15 @@ const CardText = ({
   alignItems,
   justifyContent,
   flexWrap,
-  width = "300px",
-  padding = "16px",
 }) => {
-  const cardStyle = {
-    backgroundColor,
-    borderRadius: '12px',
-    display: "flex",
-    flexDirection: "column",
-    textAlign: "justify",
-    alignItems,
-    justifyContent,
-    flexWrap,
-    width,
-    padding,
-  };
-
   return (
-    <div style={cardStyle}>
+    <div
+      style={{ backgroundColor, alignItems, justifyContent, flexWrap }}
+      className="flex flex-col text-justify rounded-xl
+                 w-full max-w-sm md:max-w-md
+                 p-4 md:p-6
+                 box-border"
+    >
       {children}
     </div>
   );

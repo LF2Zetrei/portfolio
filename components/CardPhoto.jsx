@@ -2,22 +2,17 @@ import React from 'react';
 
 const CardPhoto = ({
   imageUrl,
-  width = '300px',
-  height = '400px',
   backgroundColor = '#eee',
 }) => {
-  const cardStyle = {
-    width,
-    height,
-    backgroundColor,
-    borderRadius: '12px',
-    overflow: 'hidden',
-    backgroundImage: `url(${imageUrl})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  };
-
-  return <div style={cardStyle} />;
+  return (
+    <div
+      style={{ backgroundColor, backgroundImage: `url(${imageUrl})` }}
+      className="w-64 h-80 sm:w-72 sm:h-96 md:w-70 md:h-[400px]
+                 rounded-xl overflow-hidden
+                 bg-cover bg-center
+                 max-w-full"
+    />
+  );
 };
 
 export default CardPhoto;

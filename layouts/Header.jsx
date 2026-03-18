@@ -4,45 +4,41 @@ import { useDatas } from "@/hooks/useDatas";
 
 export default function Header() {
   const { header } = useDatas();
-
   if (!header) return null;
 
   return (
-    <div
-      style={{
-        height: header.style["height"],
-        backgroundColor: header.style["bg-color"],
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        paddingLeft: header.style["padding-left"],
-        paddingRight: header.style["padding-right"],
-      }}
+    <header
+      style={{ backgroundColor: header.style["bg-color"] }}
+      className="w-full px-4 py-3 md:px-12 flex items-center justify-between"
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Link href="/">
-          <p style={{ margin: 0 }}>{header.title}</p>
+      {/* Logo / Titre */}
+      <Link href="/">
+        <p
+          style={{ color: header.style["color"] }}
+          className="m-0 text-xl font-semibold"
+        >
+          {header.title}
+        </p>
+      </Link>
+
+      {/* Nav */}
+      <nav className="flex items-center gap-4 md:gap-8">
+        <Link
+          href={header["link-link"]}
+          style={{ color: header.style["color"] }}
+          className="text-sm md:text-base"
+        >
+          {header["link-text"]}
         </Link>
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: header.style["gap"],
-        }}
-      >
-        <Link href={header["link-link"]}>{header["link-text"]}</Link>
-
         <Button
           href={header["button-link"]}
           text={header["button-text"]}
           borderTBSize="1px"
           backgroundColor={header.style["button-color"]}
           color={header.style["color"]}
-          borderBTLine={header.style["borderTBLine"]}
+          borderBTLine={header.style["borderBTLine"]}
         />
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
