@@ -48,7 +48,7 @@ export default function Home() {
       />
 
       
-      <WhoIsLucas />
+      
      
 
       {/* === MOBILE : Section 2 === */}
@@ -95,6 +95,8 @@ export default function Home() {
         </div>
 
       </div>
+
+      <WhoIsLucas />
     </>
   );
 }
