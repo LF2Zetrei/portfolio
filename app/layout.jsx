@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 
         <Header/>
 
-        <main className="flex-1 w-full pt-16">
+        <main className="flex-1 w-full pt-0 md:pt-16">
           {children}
         </main>
 
