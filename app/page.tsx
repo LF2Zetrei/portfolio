@@ -16,23 +16,24 @@ export default function Home() {
         leftBgColor={homepage.splitsection1.left.style["bg-color"]}
         rightBgColor={homepage.splitsection1.right.style["bg-color"]}
         showDivider={false}
-        leftPadding={{ left: "0", right: "0", bottom: "50px", top: "50px" }}
         leftContent={
-          <div className="w-full max-w-[90%] md:max-w-[70%] px-4 md:px-0">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-              {homepage.splitsection1.left.title}
-            </h2>
-            <p className="mt-4 text-sm md:text-base">
-              {homepage.splitsection1.left.subtitle}
-            </p>
-            <div className="mt-6">
-              <Button
-                href={homepage.splitsection1.left["button-link"]}
-                text={homepage.splitsection1.left["button-text"]}
-                borderTBSize="1px"
-                backgroundColor={homepage.splitsection1.left.style["button-bg-color"]}
-                color={homepage.splitsection1.left.style["button-text-color"]}
-              />
+          <div className="flex justify-center items-center w-full h-full">
+            <div className="w-full max-w-[90%] md:max-w-[70%] px-4 md:px-0">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                {homepage.splitsection1.left.title}
+              </h2>
+              <p className="mt-4 text-sm md:text-base text-justify">
+                {homepage.splitsection1.left.subtitle}
+              </p>
+              <div className="mt-6">
+                <Button
+                  href={homepage.splitsection1.left["button-link"]}
+                  text={homepage.splitsection1.left["button-text"]}
+                  borderTBSize="1px"
+                  backgroundColor={homepage.splitsection1.left.style["button-bg-color"]}
+                  color={homepage.splitsection1.left.style["button-text-color"]}
+                />
+              </div>
             </div>
           </div>
         }
@@ -42,7 +43,6 @@ export default function Home() {
           </div>
         }
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
-        rightPadding={{ top: "50px", right: "20px", bottom: "50px", left: "20px" }}
       />
 
       {/* === MOBILE : Section 2 sans image de fond === */}
@@ -51,7 +51,7 @@ export default function Home() {
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
         className="md:hidden"
       >
-        <div className="w-full px-4 py-8">
+        <div className="w-full px-4 py-8 text-justify">
           {homepage.splitsection2.right["type-of-projects"].map((section) => (
             <FadeInSection key={section.id} direction="left">
               <h2 className="text-xl font-bold mt-6">{section.name}</h2>
@@ -59,7 +59,7 @@ export default function Home() {
             </FadeInSection>
           ))}
           <h4 className="mt-8 text-base">
-            <Link href="/projects">Click here to see all of them !</Link>
+            Click <Link href="/projects" className="font-semibold hover:underline"> here </Link> to see all of them !
           </h4>
         </div>
       </FullSection>
@@ -81,7 +81,7 @@ export default function Home() {
               </FadeInSection>
             ))}
             <h4 className="mt-8 text-base md:text-lg">
-              <Link href="/projects">Click here to see all of them !</Link>
+              Click <Link href="/projects" className="font-semibold hover:underline">here</Link> to see all of them !
             </h4>
           </div>
         }

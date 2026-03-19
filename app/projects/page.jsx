@@ -3,6 +3,8 @@ import Button from "@/components/Button";
 import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
 import { useEffect, useState } from "react";
+import CardPhoto from "@/components/CardPhoto"
+import { get } from "http";
 
 export default function Projects() {
   const { projects } = useDatas();
@@ -21,7 +23,13 @@ export default function Projects() {
   return (
     <div className="w-full">
       {projects.map((project) => {
-        const isSpecial = project.id % 2 === 1 && !isMobile; 
+        const isSpecial = project.id % 2 === 1; 
+
+        const imageContent = (image) => (
+          <div>
+            <CardPhoto imageUrl={image}></CardPhoto>
+          </div>
+        )
 
         const projectContent = (bgColor) => (
           <div className="flex flex-col justify-center items-start w-full px-6 py-10 md:px-12 md:py-16 md:w-4/5">
@@ -43,17 +51,32 @@ export default function Projects() {
           </div>
         );
 
+        const getColors = (isSpecial, isMobile) => {
+          if (isMobile) {
+            // Mobile : même couleur des deux côtés, alterne selon le projet
+            const bg = isSpecial ? "#edb7b3" : "#c1b580";
+            return { left: bg, right: bg };
+          }
+          // Desktop : couleurs alternées gauche/droite
+          return {
+            left: isSpecial ? "#c1b580" : "#edb7b3",
+            right: isSpecial ? "#c1b580" : "#edb7b3",
+          };
+        };
+
+        const {left, right} = getColors(isSpecial, isMobile)
+
         return (
           <SplitSection
             key={project.id}
             className={isSpecial ? "slide-left" : "slide-right"}
-            leftBgColor="#edb7b3"
-            rightBgColor="#c1b580"
-            leftBgImage={isSpecial ? project.images[0] : ""}
-            rightBgImage={isSpecial ? "" : project.images[0]}
+            leftBgColor={left}
+            rightBgColor={right}
+            leftBgImage={isSpecial && !isMobile ? project.images[0] : ""}
+            rightBgImage={isSpecial && !isMobile ? "" : project.images[0]}
             showDivider={false}
-            leftContent={isSpecial ? null : projectContent("#ece9e5")}
-            rightContent={isSpecial ? projectContent("#edb7b3") : null}
+            leftContent={isSpecial && !isMobile ? null : projectContent("#ece9e5")}
+            rightContent={isSpecial && !isMobile ? projectContent("#ece9e5") : null}
             borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
           />
         );
