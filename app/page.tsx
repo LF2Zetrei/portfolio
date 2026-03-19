@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import FadeInSection from "@/components/FadeInSection";
 import FullSection from "@/components/FullSection";
 import MetaBallSection from "@/components/MetaBallSection"
+import WhoIsLucas from "@/components/WhoIsLucas";
 
 export default function Home() {
   const { homepage } = useDatas();
@@ -45,6 +46,10 @@ export default function Home() {
         }
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
       />
+
+      
+      <WhoIsLucas />
+     
 
       {/* === MOBILE : Section 2 === */}
       <FullSection
