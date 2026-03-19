@@ -22,7 +22,7 @@ export default function Contact() {
             <h1 className="text-2xl md:text-3xl text-center w-4/5 md:w-3/5">
               {about.title}
             </h1>
-            <CardPhoto imageUrl={about.profileImage} />
+            <CardPhoto imageUrl={about.profileImage} backgroundColor="#686075"/>
           </div>
         }
         rightContent={

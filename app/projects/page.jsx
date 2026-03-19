@@ -53,13 +53,13 @@ export default function Projects() {
         const getColors = (isSpecial, isMobile) => {
           if (isMobile) {
             // Mobile : même couleur des deux côtés, alterne selon le projet
-            const bg = isSpecial ? "#edb7b3" : "#e1cf80";
+            const bg = isSpecial ? "#c6c2cd" : "#e1cf80";
             return { left: bg, right: bg };
           }
           // Desktop : couleurs alternées gauche/droite
           return {
-            left: isSpecial ? "#e1cf80" : "#edb7b3",
-            right: isSpecial ? "#e1cf80" : "#edb7b3",
+            left: isSpecial ? "#e1cf80" : "#c6c2cd",
+            right: isSpecial ? "#e1cf80" : "#c6c2cd",
           };
         };
 

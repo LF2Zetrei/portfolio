@@ -5,6 +5,7 @@ import { useDatas } from "@/hooks/useDatas";
 import Button from "@/components/Button";
 import FadeInSection from "@/components/FadeInSection";
 import FullSection from "@/components/FullSection";
+import MetaBallSection from "@/components/MetaBallSection"
 
 export default function Home() {
   const { homepage } = useDatas();
@@ -45,7 +46,7 @@ export default function Home() {
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
       />
 
-      {/* === MOBILE : Section 2 sans image de fond === */}
+      {/* === MOBILE : Section 2 === */}
       <FullSection
         bgColor={homepage.splitsection2.right.style["bg-color"]}
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
@@ -64,29 +65,31 @@ export default function Home() {
         </div>
       </FullSection>
 
-      {/* === DESKTOP : Section 2 avec image de fond === */}
-      <SplitSection
-        rightBgColor={homepage.splitsection2.right.style["bg-color"]}
-        leftBgColor="#ddd"
-        leftBgImage={homepage.splitsection2.left.image}
-        showDivider={false}
-        leftContent={null}
-        className="hidden md:flex"
-        rightContent={
-          <div className="w-full px-4 md:px-12 py-8 text-justify" >
-            {homepage.splitsection2.right["type-of-projects"].map((section) => (
-              <FadeInSection key={section.id} direction="left">
-                <h2 className="text-xl md:text-2xl font-bold mt-6">{section.name}</h2>
-                <p className="mt-2 text-sm md:text-base">{section.description}</p>
-              </FadeInSection>
-            ))}
-            <h4 className="mt-8 text-base md:text-lg">
-              Click <Link href="/projects" className="font-semibold hover:underline">here</Link> to see all of them !
-            </h4>
-          </div>
-        }
-        borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
-      />
+      {/* === DESKTOP : Section 2 avec MetaballBackground === */}
+      <div className="hidden md:flex w-full min-h-[500px] relative">
+
+        {/* Moitié gauche — MetaballBackground */}
+        <div className="w-1/2 relative">
+          <MetaBallSection />
+        </div>
+
+        {/* Moitié droite — contenu */}
+        <div
+          className="w-1/2 px-12 py-12 flex flex-col justify-center"
+          style={{ backgroundColor: homepage.splitsection2.right.style["bg-color"] }}
+        >
+          {homepage.splitsection2.right["type-of-projects"].map((section) => (
+            <FadeInSection key={section.id} direction="left">
+              <h2 className="text-xl md:text-2xl font-bold mt-6">{section.name}</h2>
+              <p className="mt-2 text-sm md:text-base text-justify">{section.description}</p>
+            </FadeInSection>
+          ))}
+          <h4 className="mt-8 text-base md:text-lg">
+            Click <Link href="/projects" className="font-semibold hover:underline">here</Link> to see all of them !
+          </h4>
+        </div>
+
+      </div>
     </>
   );
 }
