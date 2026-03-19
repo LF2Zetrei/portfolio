@@ -39,7 +39,7 @@ export default function Home() {
         }
         rightContent={
           <div className="flex justify-center items-center w-full py-6 md:py-0">
-            <CardPhoto imageUrl={homepage.splitsection1.right["card-image-link"]} />
+            <CardPhoto imageUrl={homepage.splitsection1.right["card-image-link"]} backgroundColor="#686075"/>
           </div>
         }
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
@@ -51,11 +51,11 @@ export default function Home() {
         borderBottomStyle={{ line: "none", size: "0", color: "transparent" }}
         className="md:hidden"
       >
-        <div className="w-full px-4 py-8 text-justify">
+        <div className="w-full px-4 py-8">
           {homepage.splitsection2.right["type-of-projects"].map((section) => (
             <FadeInSection key={section.id} direction="left">
               <h2 className="text-xl font-bold mt-6">{section.name}</h2>
-              <p className="mt-2 text-sm">{section.description}</p>
+              <p className="mt-2 text-sm text-justify">{section.description}</p>
             </FadeInSection>
           ))}
           <h4 className="mt-8 text-base">
@@ -73,7 +73,7 @@ export default function Home() {
         leftContent={null}
         className="hidden md:flex"
         rightContent={
-          <div className="w-full px-4 md:px-12 py-8">
+          <div className="w-full px-4 md:px-12 py-8 text-justify" >
             {homepage.splitsection2.right["type-of-projects"].map((section) => (
               <FadeInSection key={section.id} direction="left">
                 <h2 className="text-xl md:text-2xl font-bold mt-6">{section.name}</h2>

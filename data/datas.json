@@ -21,7 +21,7 @@
   "homepage": {
     "splitsection1": {
       "left": {
-        "title": "Hey there — welcome to my world!",
+        "title": "Hey there, welcome to my world!",
         "subtitle": "I'm Lucas, a student at CY Tech, a French engineering school specializing in computer science. Passionate about Cloud, DevOps and Full-Stack development, I'm building the skills today that will help me craft tomorrow’s digital solutions.",
         "button-text": "Let's talk!",
         "button-link": "/contact",
@@ -32,7 +32,7 @@
         }
       },
       "right": {
-        "card-image-link": "/images/cards/pp1.png",
+        "card-image-link": "/images/cards/pp2.png",
         "style": {
           "bg-color": "#c6c2cd",
           "button-bg-color": "#edb7b3",
@@ -49,12 +49,12 @@
           {
             "id": "1",
             "name": "Full-Stack",
-            "description": "Most of my projects dive deep into the Full-Stack universe. I love building clean REST APIs and dynamic frontends. Java and JavaScript are my go-to tools, so you'll find plenty of Spring Boot backends and modern JS frameworks on the frontend. But I’m always curious — chances are you’ll find a tech you love in here!"
+            "description": "Most of my projects dive deep into the Full-Stack universe. I love building clean REST APIs and dynamic frontends. Java and JavaScript are my go-to tools, so you'll find plenty of Spring Boot backends and modern JS frameworks on the frontend. But I’m always curious and chances are you’ll find a tech you love in here!"
           },
           {
             "id": "2",
             "name": "Automation & Deployment",
-            "description": "From GitHub Actions workflows to CI/CD pipelines, automation is everywhere in my work. Every recent project is Dockerized and ready to deploy! DevOps isn’t just a buzzword for me — it’s part of how I think and build."
+            "description": "From GitHub Actions workflows to CI/CD pipelines, automation is everywhere in my work. Every recent project is Dockerized and ready to deploy! DevOps isn’t just a buzzword for me, it’s part of how I think and build."
           },
           {
             "id": "3",
@@ -79,7 +79,7 @@
   "button-link": "/projects",
   "projects-title": "Want to See More? Check Out My Work!",
   "contact-title": "Get in Touch",
-  "contact-description": "I am currently seeking an internship opportunity in Denmark. My girlfriend lives there, and I would love to complete my final internship in the heart of the Hygge culture. If you know someone who could help—or if you're recruiting—I'd be happy to connect!",
+  "contact-description": "I am currently seeking an internship opportunity in Denmark. My girlfriend lives there, and I would love to complete my final internship in the heart of the Hygge culture. If you know someone who could help, or if you're recruiting, I'd be happy to connect!",
   "style": {
     "bg-color-right": "#c6c2cd",
     "bg-color-left": "#c6c2cd",
@@ -188,7 +188,7 @@
       "long_title": "An AI-Driven Platform to Generate Law Exam Questions",
       "subtitle": "Semi-finalist – 2-week AI competition.",
       "short_description": "A full RAG system generating law exam questions from 200 complex documents.",
-      "non_technical_description": "This project aimed to help law students study more efficiently. The platform analyzed hundreds of documents—including lessons, exams, and corrections—and automatically generated multiple-choice questions to help students train.",
+      "non_technical_description": "This project aimed to help law students study more efficiently. The platform analyzed hundreds of documents. Including lessons, exams, and corrections and automatically generated multiple-choice questions to help students train.",
       "technical_description": "The system relied on a RAG architecture: documents were manually cleaned, vectorized sentence-by-sentence, and embedded for semantic search. A Python + FastAPI backend handled question and answer generation, while a Spring Boot API managed user accounts, JWT authentication, and data storage. The front-end was built with SvelteKit, and PostgreSQL stored all generated QCMs. My role included dataset cleaning, embedding generation, authentication, and developing various backend services and controllers.",
       "global_summary": "This project combined NLP, RAG systems, multi-backend architecture, and user-facing educational tools. Reaching the semi-finals validated the robustness and creativity of the approach.",
       "github_url": "https://github.com/LF2Zetrei/data_battle_back",
@@ -264,7 +264,7 @@
       "subtitle": "First professional experience — delivered in 3 weeks.",
       "short_description": "A complete static website built for a company, featuring a gallery and product information.",
       "non_technical_description": "This website showcases inflatable structures for rental, presenting images, descriptions, and pricing. It served real customers and helped the company improve its visibility.",
-      "technical_description": "Developed using only HTML, CSS, and JavaScript during a professional internship. No web team was available, so everything—from structure to deployment—was handled manually. Hosted on IONOS.",
+      "technical_description": "Developed using only HTML, CSS, and JavaScript during a professional internship. No web team was available, so everything from structure to deployment was handled manually. Hosted on IONOS.",
       "global_summary": "A meaningful first professional project delivered under tight deadlines, proving autonomy and real-world responsibility.",
       "github_url": "",
       "extra_url": "https://www.landes-gonflables.com/app/galerie.html",

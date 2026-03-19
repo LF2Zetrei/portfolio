@@ -4,7 +4,6 @@ import { useDatas } from "@/hooks/useDatas";
 import SplitSection from "@/components/SplitSection";
 import { useEffect, useState } from "react";
 import CardPhoto from "@/components/CardPhoto"
-import { get } from "http";
 
 export default function Projects() {
   const { projects } = useDatas();
@@ -32,7 +31,7 @@ export default function Projects() {
         )
 
         const projectContent = (bgColor) => (
-          <div className="flex flex-col justify-center items-start w-full px-6 py-10 md:px-12 md:py-16 md:w-4/5">
+          <div className="flex flex-col justify-center items-start w-full px-6 py-10 md:px-12 md:py-6 md:w-4/5">
             <h2 className="text-xl md:text-2xl font-bold mb-3">
               {project.title}
             </h2>

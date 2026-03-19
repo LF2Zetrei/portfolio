@@ -3,6 +3,7 @@ import { useParams } from "next/navigation";
 import { useDatas } from "@/hooks/useDatas";
 import Gallery from "@/components/Gallery";
 import Link from "next/link";
+import FadeInSection from "@/components/FadeInSection"
 
 export default function ProjectPage() {
   const { slug } = useParams();
@@ -58,7 +59,7 @@ export default function ProjectPage() {
 
         {/* Colonne gauche — textes */}
         <div
-          className="w-full lg:w-2/5 px-6 py-10 md:px-12 flex flex-col gap-8"
+          className="w-full lg:w-2/5 px-6 py-10 md:px-12 flex flex-col gap-8 slide-left"
           style={{ backgroundColor: "#ece9e5" }}
         >
           {/* Description non-technique */}

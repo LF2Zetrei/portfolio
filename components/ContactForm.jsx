@@ -43,7 +43,7 @@ const ContactForm = ({
      ${focusedInput === field ? 'border-gray-700' : 'border-gray-300'}`;
 
   return (
-    <div className="w-full px-5 py-7 md:px-6">
+    <div className="w-full px-0 py-0">
 
       {/* Titre */}
       {title && (
@@ -58,8 +58,8 @@ const ContactForm = ({
         onSubmit={handleSubmit}
         noValidate
         style={{ backgroundColor }}
-        className="w-full rounded-lg p-6 shadow-md box-border mx-auto
-                   max-w-full sm:max-w-sm md:max-w-md"
+        className="w-full rounded-none md:rounded-lg p-6 shadow-none md:shadow-md 
+             box-border mx-auto max-w-full md:max-w-sm lg:max-w-md"
       >
         {/* Nom */}
         <label className="block font-semibold mb-2 text-sm" htmlFor="name">
