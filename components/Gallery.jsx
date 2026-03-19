@@ -73,8 +73,10 @@ export default function Gallery({ images }) {
       <div className="w-full flex flex-col items-center gap-6">
 
         {/* Pile de cartes */}
-        <div className="relative w-full flex items-center justify-center overflow-hidden"
-             style={{ height: '280px' }}>
+        <div
+          className="relative w-full flex items-center justify-center overflow-hidden"
+          style={{ height: '420px' }}  // ← augmente de 280px à 420px
+        >
 
           {images.map((img, idx) => {
             const style = getImageStyle(idx);
@@ -118,7 +120,7 @@ export default function Gallery({ images }) {
             >
               ‹
             </button>
-            <span className="text-sm text-[#1e2130]/50">
+            <span className="text-sm text-[#1e2130]">
               {current + 1} / {images.length}
             </span>
             <button
