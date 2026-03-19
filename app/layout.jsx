@@ -12,17 +12,16 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className="min-h-screen flex flex-col">
 
-        <Header />
+        <Header/>
 
-        <main className="flex-1 w-full">
+        <main className="flex-1 w-full pt-16">
           {children}
         </main>
 
         <FullSection
           padding={footer.style.padding}
           bgColor={footer.style["bg-color"]}
-          children={<Footer backgroundColor={footer.style["bg-color"]} />}
-        />
+        ><Footer backgroundColor={footer.style["bg-color"]} /></FullSection>
 
       </body>
     </html>

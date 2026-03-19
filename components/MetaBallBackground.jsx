@@ -2,7 +2,7 @@
 import { useEffect, useRef } from 'react';
 
 export default function MetaballBackground({
-  children,
+  children = null,
   speed = 3,
   bgColor = '0.0, 0.0, 0.0',
   gradientColor = 'x / WIDTH, y / HEIGHT, 1.0',
@@ -156,9 +156,11 @@ export default function MetaballBackground({
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
       />
-      <div className="relative z-10 w-full h-full">
-        {children}
-      </div>
+      {children && (
+        <div className="relative z-10 w-full h-full">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
