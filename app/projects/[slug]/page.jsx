@@ -100,7 +100,7 @@ export default function ProjectPage() {
       {/* === RÉSUMÉ === */}
       <div
         className="w-full px-6 py-12 md:px-20 md:py-16"
-        style={{ backgroundColor: "#c1b580" }}
+        style={{ backgroundColor: "#e1cf80" }}
       >
         <h3 className="text-xs uppercase tracking-widest text-[#1e2130]/50 mb-4">
           {project.summary_title}

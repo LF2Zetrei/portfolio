@@ -11,7 +11,7 @@
       "padding-right": "50px",
       "gap": "30px",
       "height": "100px",
-      "button-color": "#c1b580",
+      "button-color": "#e1cf80",
       "color":"#1e2130",
       "borderBTLine": "#1e2130",
       "button-w": "60px"
@@ -83,7 +83,7 @@
   "style": {
     "bg-color-right": "#c6c2cd",
     "bg-color-left": "#c6c2cd",
-    "button-color": "#c1b580",
+    "button-color": "#e1cf80",
     "color": "#1e2130",
     "borderBTLine": "#1e2130"
     }
