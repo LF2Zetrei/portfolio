@@ -178,7 +178,7 @@
       "global_summary": "This project demonstrates backend routing, ML integration, dataset handling, and automated inference using FastAPI. It blends data engineering and API development into a compact and educational tool.",
       "github_url": "",
       "extra_url": "",
-      "images": ["/images/wine_fastapi/after_login.png", "/images/wine_fastapi/auth_code.png", "/images/wine_fastapi/datas.png", "/images/wine_fastapi/failure_answer.png", "/images/wine_fastapi/fast_api_doc.png", "/images/wine_fastapi/get_model_info.png", "/images/wine_fastapi/login.png", "/images/wine_fastapi/model_code.png", "/images/wine_fastapi/predict_quality.png", "/images/wine_fastapi/predict_wine.png", "/images/wine_fastapi/request_code.png", "/images/wine_fastapi/routes.png"],
+      "images": ["/images/wine_fastapi/fast_api_doc.png", "/images/wine_fastapi/after_login.png", "/images/wine_fastapi/auth_code.png", "/images/wine_fastapi/datas.png", "/images/wine_fastapi/failure_answer.png", "/images/wine_fastapi/get_model_info.png", "/images/wine_fastapi/login.png", "/images/wine_fastapi/model_code.png", "/images/wine_fastapi/predict_quality.png", "/images/wine_fastapi/predict_wine.png", "/images/wine_fastapi/request_code.png", "/images/wine_fastapi/routes.png"],
       "summary_title": "A little summary :"
     },
     {
@@ -208,7 +208,7 @@
       "global_summary": "A growing, personal tool designed to support content creation through custom automation and chat interaction.",
       "github_url": "",
       "extra_url": "",
-      "images": ["/images/catbut_/code_commands_1.png","/images/catbut_/code_commands_2.png","/images/catbut_/twitch_chat_1.png", "/images/catbut_/twitch_chat_2.png", "/images/catbut_/twitch_chat_3.png", "/images/catbut_/twitch_chat_4.png"],
+      "images": ["/images/catbut_/twitch_chat_3.png","/images/catbut_/twitch_chat_2.png", "/images/catbut_/code_commands_2.png", "/images/catbut_/twitch_chat_1.png", "/images/catbut_/code_commands_1.png", "/images/catbut_/twitch_chat_4.png"],
       "summary_title": "A little summary :"
     },
     {

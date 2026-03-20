@@ -30,7 +30,7 @@ const Button = ({
                  min-w-[100px] max-w-full
                  text-sm md:text-base
                  font-medium no-underline cursor-pointer select-none
-                 transition-opacity hover:opacity-80
+                 transition-opacity hover:brightness-125
                  whitespace-nowrap"
     >
       {text}
