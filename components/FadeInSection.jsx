@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect, useRef, useState } from "react";
 
 export default function FadeInSection({ children, direction = "left" }) {
@@ -11,15 +10,12 @@ export default function FadeInSection({ children, direction = "left" }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        } else {
-          setIsVisible(false);
+          observer.unobserve(ref.current); // ← stop après la 1ère fois
         }
       },
       { threshold: 0.25 }
     );
-
     if (ref.current) observer.observe(ref.current);
-
     return () => observer.disconnect();
   }, []);
 
