@@ -1,10 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    formats: ['image/avif', 'image/webp'], // ← compression moderne
-    domains: ['images.unsplash.com'],
-  },
+  /* config options here */
 };
 
 export default nextConfig;
