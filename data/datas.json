@@ -198,8 +198,8 @@
     },
     {
       "id": 8,
-      "slug": "discord-chatbot",
-      "title": "Discord/Twitch Chat Bot",
+      "slug": "twitch-chatbot",
+      "title": "Twitch Chat Bot",
       "long_title": "A Dynamic Custom Bot for Twitch Streaming",
       "subtitle": "Improving stream engagement through automated interactions.",
       "short_description": "A custom bot designed to enhance Twitch streams with unique commands and dynamic features.",
