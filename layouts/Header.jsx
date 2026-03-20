@@ -49,7 +49,7 @@ export default function Header() {
         <Link
           href={header["link-link"]}
           style={{ color: header.style["color"] }}
-          className="text-sm md:text-base"
+          className="text-sm md:text-base hover:underline"
         >
           {header["link-text"]}
         </Link>
