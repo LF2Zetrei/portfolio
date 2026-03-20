@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const images = [
-  '/images/about/charlie1.jpg',
-  '/images/about/charlie2.png',
-  '/images/about/charlie3.png',
-  '/images/about/charlie4.png',
+  '/images/about/charlie1.webp',
+  '/images/about/charlie2.webp',
+  '/images/about/charlie3.webp',
+  '/images/about/charlie4.webp',
 ];
 
 export default function WhoIsLucas() {
