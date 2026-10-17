@@ -89,6 +89,27 @@
     }
   },
 
+  "about-me": {
+    "label": "About me",
+    "title": "Off the clock",
+    "intro": "When I'm not deploying things, I'm probably playing video games, dreaming about my next trip, or lost in a good film or book. And yes, I still code just for fun.",
+    "speedrun-text": "Celeste holds a special place in my heart: I speedrun it! My best Any% run is 38:54.627, ranked 1,137th out of 5,000+ runners on speedrun.com (October 2026). Hit play and judge for yourself.",
+    "speedrun": {
+      "time": "38:54.627",
+      "category": "Celeste · Any%",
+      "thumbnail": "/images/about_me/celeste_run.jpg",
+      "video-id": "C6wykQYHyg4",
+      "run-url": "https://www.speedrun.com/celeste/runs/ydp485jy",
+      "video-url": "https://youtu.be/C6wykQYHyg4"
+    },
+    "hobbies": [
+      { "name": "Video games", "tagline": "how I unwind" },
+      { "name": "Travel", "tagline": "new places, new stories" },
+      { "name": "Code", "tagline": "for fun, too" },
+      { "name": "Films", "tagline": "popcorn mandatory" },
+      { "name": "Books", "tagline": "one more chapter" }
+    ]
+  },
 
   "projects": [
     {

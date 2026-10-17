@@ -81,3 +81,18 @@
 }
 
 /* Optional: ajuster la distance ou la vitesse si besoin */
+
+/* Pilules qui flottent autour de la vidéo (section About me) */
+@keyframes orbitFloat {
+  0%, 100% { transform: translate(0, 0) rotate(var(--tilt, 0deg)); }
+  50% { transform: translate(var(--drift-x, 6px), var(--drift-y, -10px)) rotate(var(--tilt, 0deg)); }
+}
+
+.orbit-float {
+  animation: orbitFloat var(--duration, 6s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-float { animation: none; }
+}
