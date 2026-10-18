@@ -130,12 +130,12 @@ export default function WhoIsLucas() {
       </div>
 
       {/* Vidéo + passions en orbite, sur les metaballs */}
-      <div className="w-full lg:w-7/12 relative min-h-[420px] lg:min-h-[640px]">
+      <div className="w-full lg:w-7/12 relative min-h-[420px] lg:min-h-[640px] flex items-center">
         <div className="absolute inset-0">
           <MetaballBackground speed={0.5} bgColor="0.93, 0.91, 0.90" gradientColor="0.78, 0.76, 0.80" />
         </div>
 
-        <div className="relative z-10 min-h-[420px] lg:min-h-[640px] flex flex-col items-center justify-center gap-8 px-6 py-12 lg:py-0">
+        <div className="relative z-10 w-full min-h-[420px] lg:min-h-[640px] flex flex-col items-center justify-center gap-8 px-6 py-12 lg:py-0">
           {/* Vidéo légèrement inclinée, avec son étiquette */}
           <div className="relative w-full max-w-xl lg:w-[64%] -rotate-2">
             <VideoPreview speedrun={speedrun} />

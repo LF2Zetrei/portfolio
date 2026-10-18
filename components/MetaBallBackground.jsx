@@ -15,6 +15,8 @@ export default function MetaballBackground({
 
     let animId;
     let metaballs = [];
+    let isVisible = true;
+    let loop = null;
 
     const init = () => {
       const width = canvas.width = canvas.offsetWidth;
@@ -106,7 +108,9 @@ export default function MetaballBackground({
       // Stop previous loop
       if (animId) cancelAnimationFrame(animId);
 
-      const loop = () => {
+      loop = () => {
+        // Hors écran : on arrête de dessiner, l'observer relance la boucle au retour
+        if (!isVisible) { animId = null; return; }
         for (let i = 0; i < numMetaballs; i++) {
           const mb = metaballs[i];
           mb.x += mb.vx;
@@ -143,10 +147,18 @@ export default function MetaballBackground({
 
     window.addEventListener('resize', handleResize);
 
+    // Pause quand le canvas sort de l'écran, reprise quand il revient
+    const observer = new IntersectionObserver(([entry]) => {
+      isVisible = entry.isIntersecting;
+      if (isVisible && !animId && loop) loop();
+    });
+    observer.observe(canvas);
+
     return () => {
       cancelAnimationFrame(animId);
       clearTimeout(resizeTimer);
       window.removeEventListener('resize', handleResize);
+      observer.disconnect();
     };
   }, [speed, bgColor, gradientColor]);
 
